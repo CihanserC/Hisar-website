@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --color-primary: #513316;
+  --color-primary-container: #6b492b;
+  --color-secondary: #805524;
+  --color-tertiary: #741009;
+  --color-background: #fcf9f0;
+  --color-surface: #fcf9f0;
+  --color-surface-container: #f1eee5;
+  --color-surface-container-low: #f7f3ea;
+  --color-surface-container-high: #ebe8df;
+  --color-on-surface: #1c1c16;
+  --color-on-surface-variant: #50453c;
+  --color-outline-variant: #d4c3b8;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased;
+  }
+}
+
+@layer components {
+  .glass-nav {
+    @apply bg-[#fdfbf7]/80 backdrop-blur-md;
+  }
+  
+  .editorial-shadow {
+    box-shadow: 0 10px 30px -15px rgba(28, 28, 22, 0.1);
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-br from-primary to-primary-container text-white px-10 py-4 rounded-md font-bold text-lg tracking-wide hover:opacity-95 transition-all shadow-xl active:scale-95 inline-block;
+  }
+}
