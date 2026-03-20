@@ -3,6 +3,9 @@ import { ArrowRight, ChevronDown, Clock, MapPin } from 'lucide-react';
 import type { Page } from '../types/page';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
+import billstedtImg from '../assets/hisarback222-600x445.jpg';
+import stGeorgImg from '../assets/hisarbackhauskaffee-600x445.jpg';
+import altonaImg from '../assets/slider3-550x550.jpg';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -115,19 +118,19 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
                 name: 'Billstedt',
                 addr: t(language, 'locations.billstedt.addr'),
                 hours: t(language, 'locations.billstedt.hours'),
-                img: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=600',
+                img: billstedtImg,
               },
               {
                 name: 'St. Georg',
                 addr: t(language, 'locations.stGeorg.addr'),
                 hours: t(language, 'locations.stGeorg.hours'),
-                img: 'https://images.unsplash.com/photo-1559925393-8be0ec418cd9?auto=format&fit=crop&q=80&w=600',
+                img: stGeorgImg,
               },
               {
                 name: 'Altona',
                 addr: t(language, 'locations.altona.addr'),
                 hours: t(language, 'locations.altona.hours'),
-                img: 'https://images.unsplash.com/photo-1521017432531-fbd92d744264?auto=format&fit=crop&q=80&w=600',
+                img: altonaImg,
               },
             ].map((loc, i) => (
               <div
@@ -181,7 +184,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1585478259715-876acc5be8eb?auto=format&fit=crop&q=80&w=1200"
+                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200"
                 alt="Sourdough"
                 referrerPolicy="no-referrer"
               />

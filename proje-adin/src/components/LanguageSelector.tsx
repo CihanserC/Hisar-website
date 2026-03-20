@@ -5,7 +5,7 @@ export function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center gap-4 ml-4 text-sm opacity-60">
+    <div className="flex items-center gap-4 text-sm opacity-60">
       {languages.map((l) => (
         <button
           key={l}

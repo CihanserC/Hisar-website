@@ -38,16 +38,16 @@ export function Navbar({
         isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative">
         <div
           onClick={() => setPage('home')}
           className="flex items-center gap-4 text-2xl font-black text-primary tracking-tighter font-headline cursor-pointer"
         >
-          <img src={hisarLogo} alt="Hisar logo" className="h-10 w-auto" />
+          <img src={hisarLogo} alt="Hisar logo" className="h-14 w-auto" />
           <span>HISAR BACKHAUS</span>
         </div>
 
-        <div className="hidden md:flex items-center gap-x-10 font-headline font-bold tracking-tight text-lg">
+        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-10 font-headline font-bold tracking-tight text-lg">
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -67,7 +67,9 @@ export function Navbar({
               )}
             </button>
           ))}
+        </div>
 
+        <div className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2">
           <LanguageSelector />
         </div>
 

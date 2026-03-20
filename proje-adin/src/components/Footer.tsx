@@ -9,6 +9,8 @@ export function Footer({
   setPage: (p: Page) => void;
 }) {
   const { language } = useLanguage();
+  const currentYear = new Date().getFullYear();
+  const copyrightText = t(language, 'footer.copyright').replace(/\b20\d{2}\b/, String(currentYear));
 
   return (
     <footer className="bg-primary-container text-background w-full">
@@ -24,7 +26,7 @@ export function Footer({
             <a
               href="https://www.facebook.com/HisarBackHaus/"
               target="_blank"
-            rel="noreferrer noopener"
+              rel="noreferrer noopener"
               aria-label="Facebook"
               className="opacity-60 hover:opacity-100 transition-opacity"
             >
@@ -68,7 +70,7 @@ export function Footer({
       </div>
 
       <div className="border-t border-white/10 py-10 text-center">
-        <p className="text-xs opacity-40">{t(language, 'footer.copyright')}</p>
+        <p className="text-xs opacity-40">{copyrightText}</p>
       </div>
     </footer>
   );

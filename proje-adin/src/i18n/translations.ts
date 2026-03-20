@@ -88,9 +88,9 @@ export const translations = {
     'contact.intro':
       "Whether you're looking for your morning sourdough or planning a large gathering, we're here to bring the warmth of the hearth to you.",
 
-    'contact.billstedt.addr': 'Shop Street 1, 22111 Hamburg',
+    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
     'contact.billstedt.hours': '08:00 - 20:00 Daily',
-    'contact.stGeorg.addr': 'Main Avenue 5, 21073 Hamburg',
+    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
     'contact.stGeorg.hours': '07:00 - 21:00 Daily',
     'contact.altona.addr': 'Port Road 12, 22767 Hamburg',
     'contact.altona.hours': '08:00 - 19:00 Daily',
@@ -191,9 +191,9 @@ export const translations = {
     'contact.intro':
       "Sabah ekşi mayanızı arıyorsanız ya da büyük bir buluşma planlıyorsanız, ocağın sıcaklığını size getirmek için buradayız.",
 
-    'contact.billstedt.addr': 'Shop Caddesi 1, 22111 Hamburg',
+    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
     'contact.billstedt.hours': '08:00 - 20:00 Her Gün',
-    'contact.stGeorg.addr': 'Main Bulvarı 5, 21073 Hamburg',
+    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
     'contact.stGeorg.hours': '07:00 - 21:00 Her Gün',
     'contact.altona.addr': 'Liman Yolu 12, 22767 Hamburg',
     'contact.altona.hours': '08:00 - 19:00 Her Gün',
@@ -295,9 +295,9 @@ export const translations = {
     'contact.intro':
       'Ob Sie Ihren morgendlichen Sauerteig suchen oder eine große Veranstaltung planen – wir bringen die Wärme vom Herd zu Ihnen.',
 
-    'contact.billstedt.addr': 'Shop-Straße 1, 22111 Hamburg',
+    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
     'contact.billstedt.hours': '08:00 - 20:00 Täglich',
-    'contact.stGeorg.addr': 'Main-Allee 5, 21073 Hamburg',
+    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
     'contact.stGeorg.hours': '07:00 - 21:00 Täglich',
     'contact.altona.addr': 'Hafenstraße 12, 22767 Hamburg',
     'contact.altona.hours': '08:00 - 19:00 Täglich',
