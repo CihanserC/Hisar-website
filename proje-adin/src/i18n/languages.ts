@@ -1,3 +1,3 @@
-export type Language = 'TR' | 'EN' | 'DE';
+export type Language = 'EN' | 'DE';
 
-export const languages: Language[] = ['TR', 'DE', 'EN'];
+export const languages: Language[] = ['DE', 'EN'];

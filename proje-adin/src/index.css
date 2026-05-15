@@ -2,9 +2,55 @@
 
 @import "tailwindcss";
 
+/* Gotham: lisanslı dosyaları public/fonts/ içine koyun veya Adobe Fonts kit linkini index.html’e ekleyin. */
+@font-face {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("Gotham Light"),
+    local("Gotham-Light"),
+    url("/fonts/Gotham-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Gotham Book"),
+    local("Gotham-Book"),
+    url("/fonts/Gotham-Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    local("Gotham Medium"),
+    local("Gotham-Medium"),
+    url("/fonts/Gotham-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    local("Gotham Bold"),
+    local("Gotham-Bold"),
+    url("/fonts/Gotham-Bold.woff2") format("woff2");
+}
+
 @theme {
   --font-headline: "Noto Serif", serif;
   --font-body: "Plus Jakarta Sans", sans-serif;
+  --font-nav: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --color-primary: #513316;
   --color-primary-container: #6b492b;

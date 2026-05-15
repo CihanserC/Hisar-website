@@ -1,11 +1,8 @@
 import { motion } from 'motion/react';
-import { ArrowRight, ChevronDown, Clock, MapPin } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import type { Page } from '../types/page';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
-import billstedtImg from '../assets/hisarback222-600x445.jpg';
-import stGeorgImg from '../assets/hisarbackhauskaffee-600x445.jpg';
-import altonaImg from '../assets/slider3-550x550.jpg';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -88,82 +85,13 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               {t(language, 'home.storyQuote')}
             </p>
             <button
+              type="button"
               onClick={() => setPage('about')}
-              className="inline-flex items-center gap-4 text-primary font-bold text-xl hover:gap-6 transition-all group"
+              className="inline-flex items-center gap-4 text-primary font-bold text-xl transition-all hover:gap-6 group"
             >
               {t(language, 'home.readFullStory')}{' '}
               <ArrowRight className="group-hover:text-tertiary" />
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Locations */}
-      <section className="py-32 px-6 md:px-12 bg-surface-container-low">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div>
-              <span className="font-body text-tertiary font-bold tracking-widest uppercase text-sm">
-                {t(language, 'locations.visitUs')}
-              </span>
-              <h2 className="font-headline text-5xl text-primary font-black mt-4">
-                {t(language, 'locations.hearthHome')}
-              </h2>
-            </div>
-            <p className="max-w-md text-on-surface-variant">{t(language, 'locations.intro')}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                name: 'Billstedt',
-                addr: t(language, 'locations.billstedt.addr'),
-                hours: t(language, 'locations.billstedt.hours'),
-                img: billstedtImg,
-              },
-              {
-                name: 'St. Georg',
-                addr: t(language, 'locations.stGeorg.addr'),
-                hours: t(language, 'locations.stGeorg.hours'),
-                img: stGeorgImg,
-              },
-              {
-                name: 'Altona',
-                addr: t(language, 'locations.altona.addr'),
-                hours: t(language, 'locations.altona.hours'),
-                img: altonaImg,
-              },
-            ].map((loc, i) => (
-              <div
-                key={i}
-                className="group bg-white rounded-2xl overflow-hidden editorial-shadow transition-all hover:-translate-y-2"
-              >
-                <div className="h-72 overflow-hidden relative">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    src={loc.img}
-                    alt={loc.name}
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 text-white font-headline font-bold text-3xl">
-                    {loc.name}
-                  </div>
-                </div>
-                <div className="p-10 space-y-6">
-                  <div className="flex items-start gap-4 text-on-surface-variant">
-                    <MapPin className="text-tertiary shrink-0" size={20} />
-                    <span>{loc.addr}</span>
-                  </div>
-                  <div className="flex items-start gap-4 text-on-surface-variant">
-                    <Clock className="text-tertiary shrink-0" size={20} />
-                    <span>{loc.hours}</span>
-                  </div>
-                  <button className="w-full mt-6 py-4 border border-outline-variant rounded-xl font-bold text-primary hover:bg-primary hover:text-white transition-all">
-                    {t(language, 'locations.getDirections')}
-                  </button>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

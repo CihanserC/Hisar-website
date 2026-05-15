@@ -32,49 +32,61 @@ export function Navbar({
     { label: t(language, 'nav.contact'), id: 'contact' },
   ];
 
+  /** Transparent nav → light (white) text. Glass nav (after scroll) → black text. */
+  const navTransparent = !isScrolled;
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-6'
+        isScrolled ? 'glass-nav py-6 shadow-sm' : 'bg-transparent py-9'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative min-h-[4.25rem] md:min-h-[4.75rem]">
         <div
           onClick={() => setPage('home')}
-          className="flex items-center gap-4 text-2xl font-black text-primary tracking-tighter font-headline cursor-pointer"
+          className="flex items-center cursor-pointer"
         >
-          <img src={hisarLogo} alt="Hisar logo" className="h-14 w-auto" />
-          <span>HISAR BACKHAUS</span>
+          <img src={hisarLogo} alt="Hisar logo" className="h-20 md:h-24 w-auto" />
         </div>
 
-        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-10 font-headline font-bold tracking-tight text-lg">
+        <div
+          className={`hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-8 md:gap-x-12 font-nav font-light uppercase tracking-[0.16em] md:tracking-[0.2em] text-lg md:text-xl ${
+            navTransparent ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]' : ''
+          }`}
+        >
           {navLinks.map((link) => (
             <button
               key={link.id}
               onClick={() => setPage(link.id)}
-              className={`transition-all duration-300 relative group ${
+              className={`transition-all duration-300 relative group hover:text-[#d40304] ${
                 currentPage === link.id
-                  ? 'text-tertiary'
-                  : 'text-primary opacity-80 hover:opacity-100 hover:text-tertiary'
+                  ? navTransparent
+                    ? 'text-white font-normal'
+                    : 'text-black font-normal'
+                  : navTransparent
+                    ? 'text-white/85'
+                    : 'text-black/80'
               }`}
             >
               {link.label}
               {currentPage === link.id && (
                 <motion.div
                   layoutId="navUnderline"
-                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-tertiary"
+                  className={`absolute -bottom-1 left-0 w-full h-px ${
+                    navTransparent ? 'bg-white' : 'bg-black'
+                  }`}
                 />
               )}
             </button>
           ))}
         </div>
 
-        <div className="hidden md:block absolute right-12 top-1/2 -translate-y-1/2">
-          <LanguageSelector />
+        <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
+          <LanguageSelector onDark={navTransparent} />
         </div>
 
         <button
-          className="md:hidden text-primary"
+          className={`md:hidden ${navTransparent ? 'text-white drop-shadow-md' : 'text-black'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <MenuIcon />}
@@ -97,8 +109,8 @@ export function Navbar({
                   setPage(link.id);
                   setIsMobileMenuOpen(false);
                 }}
-                className={`text-2xl font-headline font-bold text-left ${
-                  currentPage === link.id ? 'text-tertiary' : 'text-primary'
+                className={`text-4xl font-nav font-light uppercase tracking-[0.12em] text-left ${
+                  currentPage === link.id ? 'text-tertiary font-normal' : 'text-primary'
                 }`}
               >
                 {link.label}

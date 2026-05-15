@@ -88,11 +88,11 @@ export const translations = {
     'contact.intro':
       "Whether you're looking for your morning sourdough or planning a large gathering, we're here to bring the warmth of the hearth to you.",
 
-    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
+    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg',
     'contact.billstedt.hours': '08:00 - 20:00 Daily',
-    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
+    'contact.stGeorg.addr': 'Lüneburger Str. 37, 21073 Hamburg',
     'contact.stGeorg.hours': '07:00 - 21:00 Daily',
-    'contact.altona.addr': 'Port Road 12, 22767 Hamburg',
+    'contact.altona.addr': 'Barner Str. 44-46, 22765 Hamburg',
     'contact.altona.hours': '08:00 - 19:00 Daily',
 
     'footer.tagline':
@@ -101,112 +101,9 @@ export const translations = {
     'footer.contactTitle': 'Contact Us',
     'footer.getInTouch': 'Get in touch',
     'footer.copyright': '© 2024 Hisar Backhaus. All rights reserved.',
-    'footer.billstedtLine': 'Billstedt: Shop Street 1, 08:00 - 20:00',
-    'footer.stGeorgLine': 'St. Georg: Main Ave 5, 07:00 - 21:00',
-    'footer.altonaLine': 'Altona: Port Road 12, 08:00 - 19:00',
-  },
-  TR: {
-    'nav.menu': 'Menü',
-    'nav.about': 'Hakkımızda',
-    'nav.contact': 'İletişim',
-
-    'home.estHamburg': 'KURULUŞ: HAMBURG',
-    'home.artisanBakeryCafe': 'Zanaat Fırını & Kafe',
-    'home.viewOurMenu': 'MENÜMÜZÜ GÖRÜN',
-    'home.storySoul': 'Taze Fırın İşinin',
-    'home.storyFreshBaking': 'Ruhu',
-    'home.storyParagraph1':
-      "Nesiller boyunca taze hamurun ve kavrulmuş kahvenin kokusu aile mirasımızı şekillendirdi. Hisar Backhaus'ta geleneksel Anadolu tekniklerini modern Avrupa pastacılığıyla buluşturuyoruz.",
-    'home.storyQuote':
-      '"Her somun sabır, ısı ve yerel tarlalardan gelen en özenli organik tanelerden oluşan bir hikaye anlatır."',
-    'home.readFullStory': 'HİKAYEMİZİ TAMAMINI OKUYUN',
-
-    'locations.visitUs': 'Bizi Ziyaret Edin',
-    'locations.hearthHome': 'Ocak ve Ev',
-    'locations.intro':
-      'Hamburg genelinde zanaat kahvesi ve el yapımı hamur işleri için size en yakın sığınağı bulun.',
-    'locations.getDirections': 'YOL TARİFİ AL',
-
-    'locations.billstedt.addr': 'Shop Caddesi 1, Hamburg',
-    'locations.billstedt.hours': '08:00 - 20:00 Her Gün',
-    'locations.stGeorg.addr': 'Main Bulvarı 5, Hamburg',
-    'locations.stGeorg.hours': '07:00 - 21:00 Her Gün',
-    'locations.altona.addr': 'Liman Yolu 12, Hamburg',
-    'locations.altona.hours': '08:00 - 19:00 Her Gün',
-
-    'menuHighlights.selection': 'Zanaatkar Seçkisi',
-    'menuHighlights.bakedWithHeart': 'Kalple Pişirildi',
-    'menuHighlights.signatureLabel': 'İmza',
-    'menuHighlights.signatureTitle': 'Köy Ekşi Mayası',
-    'menuHighlights.signatureDesc':
-      'Mükemmel tang ve hafif kırıntı için 36 saat yavaş fermente.',
-    'menuHighlights.exploreBakery': 'FIRINI KEŞFEDİN',
-    'menuHighlights.pastriesTitle': 'Sabah Viennoiserie',
-    'menuHighlights.pastriesDesc': '4’te taze hazırlanan, kat kat tereyağıyla mükemmelleşmiş.',
-    'menuHighlights.specialtyBrewsTitle': 'Özel Demlemeler',
-    'menuHighlights.savoryPlatesTitle': 'Lezzetli Tabaklar',
-
-    'menuPage.artisanalSelection': 'Zanaat Seçkisi',
-    'menuPage.dailyLine1': 'Günün',
-    'menuPage.dailyLine2': 'Fırın Listesi.',
-    'menuPage.description':
-      'Gelenekle hazırlanır, sıcaklıkla servis edilir. Fırınlarımızdan kalbinize, el yapımı lezzet kategorilerimizi keşfedin.',
-    'menuPage.breads.title': 'Ekmekler',
-    'menuPage.breads.desc':
-      'İmza ekşi mayalılarımız ve rustik somunlarımız; derin lezzet için fermente edilir.',
-    'menuPage.breads.countrySourdough.name': 'Köy Ekşi Mayası',
-    'menuPage.breads.countrySourdough.desc': '36 saatlik yavaş fermantasyon',
-    'menuPage.breads.oliveRosemary.name': 'Zeytin ve Biberiye',
-    'menuPage.breads.oliveRosemary.desc': 'Kalamata zeytinleri ve taze otlar',
-    'menuPage.breads.walnutRye.name': 'Cevizli Çavdar',
-    'menuPage.breads.walnutRye.desc': 'Kavrulmuş cevizli koyu çavdar',
-
-    'menuPage.pastries.title': 'Hamur İşleri',
-    'menuPage.pastries.desc': 'Tereyağlı, puf puf ve altın renginde. Sabahların vazgeçilmezi.',
-    'menuPage.pastries.classicCroissant.name': 'Klasik Kruvasan',
-    'menuPage.pastries.classicCroissant.desc': 'Saf Fransız tereyağı katmanları',
-    'menuPage.pastries.painAuChocolat.name': 'Çikolatalı Pain au Chocolat',
-    'menuPage.pastries.painAuChocolat.desc': 'Koyu Belçika çikolatası',
-    'menuPage.pastries.almondDanish.name': 'Bademli Danimarka',
-    'menuPage.pastries.almondDanish.desc': 'Ev yapımı badem kreması',
-
-    'about.rawReal.title': 'Çıplak ve Gerçek',
-    'about.rawReal.text':
-      'Katkı yok. Koruyucu yok. Taş değirmenden geçirilmiş organik unlar ve doğal mayalar kullanıyoruz.',
-    'about.handcraftedSoul.title': 'El Yapımı Ruh',
-    'about.handcraftedSoul.text':
-      "Makinelerin sezgisi yok. Ekmekçilerimiz hamura dokunur; esnekliğini ve hidratasyonunu hisseder.",
-    'about.freshnessFirst.title': 'Tazelik Önde',
-    'about.freshnessFirst.text':
-      "Fırınlama 03:00'te başlar. Gün boyunca küçük partiler halinde pişirir; çıtır kabuğu garanti ederiz.",
-
-    'about.est1982': 'Kuruluş: 1982',
-    'about.hearthTitle1': 'Ocağımız',
-    'about.hearthTitle2': "Hamburg'da",
-    'about.storyParagraph1':
-      "Öykümüz her somunun altın rengi kabuğuna yazıldı. Üç nesildir Hisar ailesi un, su ve ateşin kutsal simyasını yaşatıyor; zanaat fırıncılığının özgün ruhunu Almanya'nın kalbine taşıyoruz.",
-
-    'contact.letsConnect': 'Bağlantı Kuralım',
-    'contact.getInTouch': 'İletişime Geçin',
-    'contact.intro':
-      "Sabah ekşi mayanızı arıyorsanız ya da büyük bir buluşma planlıyorsanız, ocağın sıcaklığını size getirmek için buradayız.",
-
-    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
-    'contact.billstedt.hours': '08:00 - 20:00 Her Gün',
-    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
-    'contact.stGeorg.hours': '07:00 - 21:00 Her Gün',
-    'contact.altona.addr': 'Liman Yolu 12, 22767 Hamburg',
-    'contact.altona.hours': '08:00 - 19:00 Her Gün',
-
-    'footer.tagline':
-      'Zanaat fırıncılığı bizim dilimiz. Kabuktan içindeki kırıntıya kadar, her hareketi kusursuz bir ısırığın peşinde özenle yapıyoruz.',
-    'footer.locationsTitle': 'Konumlarımız',
-    'footer.contactTitle': 'Bize Ulaşın',
-    'footer.getInTouch': 'İletişime geçin',
-    'footer.copyright': '© 2024 Hisar Backhaus. Tüm hakları saklıdır.',
-    'footer.billstedtLine': 'Billstedt: Shop Caddesi 1, 08:00 - 20:00',
-    'footer.stGeorgLine': 'St. Georg: Main Bulvarı 5, 07:00 - 21:00',
-    'footer.altonaLine': 'Altona: Liman Yolu 12, 08:00 - 19:00',
+    'footer.billstedtLine': 'Billstedt: Billstedter Hauptstraße 51',
+    'footer.stGeorgLine': 'Harburg: Lüneburger Str. 37, 21073 Hamburg',
+    'footer.altonaLine': 'Altona: Barner Str. 44-46, 22765 Hamburg',
   },
   DE: {
     'nav.menu': 'Menü',
@@ -295,11 +192,11 @@ export const translations = {
     'contact.intro':
       'Ob Sie Ihren morgendlichen Sauerteig suchen oder eine große Veranstaltung planen – wir bringen die Wärme vom Herd zu Ihnen.',
 
-    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg, Almanya',
+    'contact.billstedt.addr': 'Billstedter Hauptstraße 51, 22111 Hamburg',
     'contact.billstedt.hours': '08:00 - 20:00 Täglich',
-    'contact.stGeorg.addr': 'Steindamm 27, 20099 Hamburg, Almanya',
+    'contact.stGeorg.addr': 'Lüneburger Str. 37, 21073 Hamburg',
     'contact.stGeorg.hours': '07:00 - 21:00 Täglich',
-    'contact.altona.addr': 'Hafenstraße 12, 22767 Hamburg',
+    'contact.altona.addr': 'Barner Str. 44-46, 22765 Hamburg',
     'contact.altona.hours': '08:00 - 19:00 Täglich',
 
     'footer.tagline':
@@ -308,13 +205,12 @@ export const translations = {
     'footer.contactTitle': 'Kontakt',
     'footer.getInTouch': 'Kontakt aufnehmen',
     'footer.copyright': '© 2024 Hisar Backhaus. Alle Rechte vorbehalten.',
-    'footer.billstedtLine': 'Billstedt: Shop-Straße 1, 08:00 - 20:00',
-    'footer.stGeorgLine': 'St. Georg: Main-Allee 5, 07:00 - 21:00',
-    'footer.altonaLine': 'Altona: Hafenstraße 12, 08:00 - 19:00',
+    'footer.billstedtLine': 'Billstedt: Billstedter Hauptstraße 51',
+    'footer.stGeorgLine': 'Harburg: Lüneburger Str. 37, 21073 Hamburg',
+    'footer.altonaLine': 'Altona: Barner Str. 44-46, 22765 Hamburg',
   },
 } as const;
 
 export type TranslationKey = keyof typeof translations.EN;
 
 export const t = (language: Language, key: TranslationKey) => translations[language][key];
-
