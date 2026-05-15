@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu as MenuIcon, X } from 'lucide-react';
 
-import hisarLogo from '../assets/hisar-logo.png';
+import hisarLogo from '../assets/logo/hisar-logo.png';
 import type { Page } from '../types/page';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
