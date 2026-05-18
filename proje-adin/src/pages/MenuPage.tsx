@@ -1,6 +1,6 @@
 import { useMemo, useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useInView } from 'motion/react';
-import { Search, X, ChevronRight, Utensils, TriangleAlert } from 'lucide-react';
+import { Search, X, ChevronRight, Utensils } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { menuData, allergenColors, badgeConfig, type MenuCategory, type MenuItem } from '../data/menuData';
 import type { Language } from '../i18n/languages';
@@ -549,30 +549,7 @@ export function MenuPage() {
           />
         ))}
 
-        <footer className="border-t border-outline-variant/40 pt-10 pb-8">
-          <div className="flex items-start gap-3 p-5 bg-amber-50 border border-amber-200 rounded-2xl max-w-3xl">
-            <TriangleAlert className="mt-1 h-5 w-5 flex-shrink-0 text-amber-700" />
-            <div>
-              <p className="text-sm font-bold text-amber-900 mb-1">
-                {copy.allergenNoteTitle}
-              </p>
-              <p className="text-xs text-amber-800 leading-relaxed">
-                {copy.allergenNote}
-              </p>
-            </div>
-          </div>
 
-          <div className="mt-8">
-            <p className="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">
-              {copy.allergens}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {Object.keys(allergenColors).map((label) => (
-                <AllergenChip key={label} label={label} />
-              ))}
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   );
