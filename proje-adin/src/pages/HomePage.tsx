@@ -3,6 +3,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import type { Page } from '../types/page';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
+import heroVideo from '../assets/videos/website-hisar.mp4';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -12,11 +13,14 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       {/* Hero */}
       <header className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <video
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=1920"
-            alt="Fresh Croissants"
-            referrerPolicy="no-referrer"
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden
           />
           <div className="absolute inset-0 bg-black/30"></div>
         </div>

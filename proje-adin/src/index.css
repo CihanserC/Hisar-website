@@ -82,6 +82,6 @@
   }
 
   .btn-primary {
-    @apply bg-gradient-to-br from-primary to-primary-container text-white px-10 py-4 rounded-md font-bold text-lg tracking-wide hover:opacity-95 transition-all shadow-xl active:scale-95 inline-block;
+    @apply bg-tertiary text-white px-10 py-4 rounded-md font-bold text-lg tracking-wide hover:bg-tertiary/90 transition-all shadow-xl active:scale-95 inline-block;
   }
 }
