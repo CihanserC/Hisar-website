@@ -44,11 +44,15 @@ export function Navbar({
   const navOnContact = currentPage === 'contact';
   const navOnDarkHero = navTransparent && !navOnContact;
 
+  const navClassName = navOnContact
+    ? 'bg-background py-9 shadow-sm border-b border-outline-variant/30'
+    : navScrolled
+      ? 'glass-nav py-6 shadow-sm'
+      : 'bg-transparent py-9';
+
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        navScrolled ? 'glass-nav py-6 shadow-sm' : 'bg-transparent py-9'
-      }`}
+      className={`${navOnContact ? 'absolute' : 'fixed'} top-0 w-full z-50 ${navOnContact ? '' : 'transition-all duration-500'} ${navClassName}`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative min-h-[4.25rem] md:min-h-[4.75rem]">
         <div

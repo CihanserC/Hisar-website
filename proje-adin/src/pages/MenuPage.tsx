@@ -1,6 +1,6 @@
 import { useMemo, useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useInView } from 'motion/react';
-import { Search, X, ChevronRight, Leaf, Sparkles, Utensils, TriangleAlert } from 'lucide-react';
+import { Search, X, ChevronRight, Utensils, TriangleAlert } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { menuData, allergenColors, badgeConfig, type MenuCategory, type MenuItem } from '../data/menuData';
 import type { Language } from '../i18n/languages';
@@ -79,7 +79,6 @@ const pageCopy = {
     noIngredients: 'Zutateninformationen folgen in Kürze.',
     noResults: 'Keine Produkte gefunden',
     clearSearch: 'Suche löschen',
-    freshDaily: 'Täglich frisch',
     noShopping: 'Nur Speisekarte',
     tapHint: 'Zum Öffnen antippen',
     allergenNoteTitle: 'Hinweis zu Allergenen',
@@ -103,7 +102,6 @@ const pageCopy = {
     noIngredients: 'Ingredient information coming soon.',
     noResults: 'No products found',
     clearSearch: 'Clear search',
-    freshDaily: 'Fresh daily',
     noShopping: 'Menu only',
     tapHint: 'Tap to open',
     allergenNoteTitle: 'Allergen note',
@@ -356,7 +354,7 @@ function CategorySection({
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
         {cat.items.map((item, i) => (
           <MenuItemCard
             key={item.name}
@@ -440,20 +438,6 @@ export function MenuPage() {
           >
             <p className="font-headline text-2xl md:text-3xl italic text-white/90 mb-5">{copy.subtitle}</p>
             <p className="text-base md:text-lg text-white/75 leading-relaxed">{copy.intro}</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55 }}
-            className="mt-10 flex flex-wrap gap-3"
-          >
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-primary">
-              <Sparkles size={16} /> {copy.freshDaily}
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-full bg-tertiary px-5 py-3 text-sm font-bold text-white">
-              <Leaf size={16} /> {copy.noShopping}
-            </span>
           </motion.div>
         </div>
       </header>
