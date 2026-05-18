@@ -21,10 +21,16 @@ export function Navbar({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    if (currentPage === 'contact') {
+      setIsScrolled(false);
+      return;
+    }
+
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [currentPage]);
 
   const navLinks: { label: string; id: Page }[] = [
     { label: t(language, 'nav.menu'), id: 'menu' },
@@ -32,13 +38,16 @@ export function Navbar({
     { label: t(language, 'nav.contact'), id: 'contact' },
   ];
 
-  /** Transparent nav → light (white) text. Glass nav (after scroll) → black text. */
-  const navTransparent = !isScrolled;
+  /** Contact page: no scroll shrink/glass. Other pages: transparent until scrolled. */
+  const navScrolled = isScrolled && currentPage !== 'contact';
+  const navTransparent = !navScrolled;
+  const navOnContact = currentPage === 'contact';
+  const navOnDarkHero = navTransparent && !navOnContact;
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled ? 'glass-nav py-6 shadow-sm' : 'bg-transparent py-9'
+        navScrolled ? 'glass-nav py-6 shadow-sm' : 'bg-transparent py-9'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center relative min-h-[4.25rem] md:min-h-[4.75rem]">
@@ -51,7 +60,7 @@ export function Navbar({
 
         <div
           className={`hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-8 md:gap-x-12 font-nav font-light uppercase tracking-[0.16em] md:tracking-[0.2em] text-lg md:text-xl ${
-            navTransparent ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]' : ''
+            navOnDarkHero ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]' : ''
           }`}
         >
           {navLinks.map((link) => (
@@ -60,12 +69,16 @@ export function Navbar({
               onClick={() => setPage(link.id)}
               className={`transition-all duration-300 relative group hover:text-[#d40304] ${
                 currentPage === link.id
-                  ? navTransparent
-                    ? 'text-white font-normal'
-                    : 'text-black font-normal'
-                  : navTransparent
-                    ? 'text-white/85'
-                    : 'text-black/80'
+                  ? navOnContact
+                    ? 'text-tertiary font-normal'
+                    : navOnDarkHero
+                      ? 'text-white font-normal'
+                      : 'text-black font-normal'
+                  : navOnContact
+                    ? 'text-tertiary/80'
+                    : navOnDarkHero
+                      ? 'text-white/85'
+                      : 'text-black/80'
               }`}
             >
               {link.label}
@@ -73,7 +86,7 @@ export function Navbar({
                 <motion.div
                   layoutId="navUnderline"
                   className={`absolute -bottom-1 left-0 w-full h-px ${
-                    navTransparent ? 'bg-white' : 'bg-black'
+                    navOnContact ? 'bg-tertiary' : navOnDarkHero ? 'bg-white' : 'bg-black'
                   }`}
                 />
               )}
@@ -82,11 +95,13 @@ export function Navbar({
         </div>
 
         <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
-          <LanguageSelector onDark={navTransparent} />
+          <LanguageSelector onDark={navOnDarkHero} />
         </div>
 
         <button
-          className={`md:hidden ${navTransparent ? 'text-white drop-shadow-md' : 'text-black'}`}
+          className={`md:hidden ${
+            navOnContact ? 'text-tertiary' : navOnDarkHero ? 'text-white drop-shadow-md' : 'text-black'
+          }`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <MenuIcon />}

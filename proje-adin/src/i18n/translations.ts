@@ -4,7 +4,7 @@ export const translations = {
   EN: {
     'nav.menu': 'Menu',
     'nav.about': 'About Us',
-    'nav.contact': 'Contact',
+    'nav.contact': 'Locations',
 
     'home.estHamburg': 'EST. HAMBURG',
     'home.artisanBakeryCafe': 'Artisan Bakery & Cafe',
@@ -108,7 +108,7 @@ export const translations = {
   DE: {
     'nav.menu': 'Menü',
     'nav.about': 'Über uns',
-    'nav.contact': 'Kontakt',
+    'nav.contact': 'Standorte',
 
     'home.estHamburg': 'SEIT HAMBURG',
     'home.artisanBakeryCafe': 'Handwerkliche Bäckerei & Café',
