@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import type { Page } from '../types/page';
@@ -7,6 +8,40 @@ import heroVideo from '../assets/videos/website-hisar.mp4';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
+  const heroVideoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    const play = () => {
+      void video.play().catch(() => {});
+    };
+
+    const restartFromStart = () => {
+      video.currentTime = 0;
+      play();
+    };
+
+    const onTimeUpdate = () => {
+      if (Number.isFinite(video.duration) && video.currentTime >= video.duration - 0.05) {
+        video.currentTime = 0;
+      }
+    };
+
+    video.addEventListener('ended', restartFromStart);
+    video.addEventListener('timeupdate', onTimeUpdate);
+    video.addEventListener('canplay', play);
+
+    video.load();
+    play();
+
+    return () => {
+      video.removeEventListener('ended', restartFromStart);
+      video.removeEventListener('timeupdate', onTimeUpdate);
+      video.removeEventListener('canplay', play);
+    };
+  }, []);
 
   return (
     <>
@@ -14,8 +49,10 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       <header className="relative h-screen w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <video
+            ref={heroVideoRef}
             className="w-full h-full object-cover"
             src={heroVideo}
+            preload="auto"
             autoPlay
             loop
             muted
@@ -64,6 +101,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
         </div>
       </header>
 
+      <div className="font-playfair">
       {/* Story Section */}
       <section className="py-32 px-6 md:px-24 bg-surface overflow-hidden">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
@@ -78,7 +116,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="absolute -bottom-8 -right-8 w-64 h-64 border-4 border-primary/10 rounded-lg -z-0"></div>
           </div>
           <div className="md:col-span-7 space-y-10">
-            <h2 className="font-headline text-5xl md:text-7xl text-primary font-bold leading-tight">
+            <h2 className="text-5xl md:text-7xl text-primary font-bold leading-tight">
               {t(language, 'home.storySoul')} <br />
               <span className="italic text-tertiary">{t(language, 'home.storyFreshBaking')}</span>
             </h2>
@@ -104,10 +142,10 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       <section className="py-32 bg-surface">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="mb-24 text-center max-w-3xl mx-auto">
-            <span className="font-body text-tertiary font-bold tracking-widest uppercase">
+            <span className="text-tertiary font-bold tracking-widest uppercase">
               {t(language, 'menuHighlights.selection')}
             </span>
-            <h2 className="font-headline text-6xl md:text-8xl text-primary font-black mt-6 tracking-tighter">
+            <h2 className="text-6xl md:text-8xl text-primary font-black mt-6 tracking-tighter">
               {t(language, 'menuHighlights.bakedWithHeart')}
             </h2>
           </div>
@@ -125,7 +163,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
                 <p className="uppercase tracking-widest text-sm mb-4 opacity-80 font-bold">
                   {t(language, 'menuHighlights.signatureLabel')}
                 </p>
-                <h3 className="font-headline text-6xl font-bold">
+                <h3 className="text-6xl font-bold">
                   {t(language, 'menuHighlights.signatureTitle')}
                 </h3>
                 <p className="mt-6 max-w-xs opacity-90 text-lg">{t(language, 'menuHighlights.signatureDesc')}</p>
@@ -147,7 +185,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
-                <h3 className="font-headline text-5xl text-white font-bold">
+                <h3 className="text-5xl text-white font-bold">
                   {t(language, 'menuHighlights.pastriesTitle')}
                 </h3>
                 <p className="text-white mt-4 opacity-90 text-xl">
@@ -165,7 +203,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="font-headline text-3xl font-bold">
+                <h3 className="text-3xl font-bold">
                   {t(language, 'menuHighlights.specialtyBrewsTitle')}
                 </h3>
               </div>
@@ -180,7 +218,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               />
               <div className="absolute inset-0 bg-tertiary/20 group-hover:bg-tertiary/10 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-white">
-                <h3 className="font-headline text-3xl font-bold">
+                <h3 className="text-3xl font-bold">
                   {t(language, 'menuHighlights.savoryPlatesTitle')}
                 </h3>
               </div>
@@ -188,6 +226,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           </div>
         </div>
       </section>
+      </div>
     </>
   );
 }

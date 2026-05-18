@@ -11,9 +11,22 @@ import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import heroVideo from './assets/videos/website-hisar.mp4';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');
+
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'video';
+    link.href = heroVideo;
+    link.type = 'video/mp4';
+    document.head.appendChild(link);
+    return () => {
+      document.head.removeChild(link);
+    };
+  }, []);
 
   // Scroll to top on page change
   useEffect(() => {
@@ -28,7 +41,7 @@ export default function App() {
         <main className="flex-grow">
           <AnimatePresence mode="wait">
             {page === 'home' && (
-              <motion.div key="home" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              <motion.div key="home" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                 <HomePage setPage={setPage} />
               </motion.div>
             )}
