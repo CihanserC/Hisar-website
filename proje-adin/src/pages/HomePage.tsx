@@ -62,21 +62,14 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           <div className="absolute inset-0 bg-black/30"></div>
         </div>
         <div className="relative z-10 text-center px-6">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="font-body text-sm tracking-[0.4em] text-white mb-6 uppercase font-bold"
-          >
-            {t(language, 'home.estHamburg')}
-          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="font-headline text-7xl md:text-9xl font-black text-white tracking-tighter mb-8 leading-tight"
+            className="font-headline text-7xl md:text-9xl font-black text-white tracking-tighter mb-8 leading-none"
           >
-            HISAR <br /> BACKHAUS
+            <span className="block">HISAR</span>
+            <span className="block -mt-1 md:-mt-2">BACKHAUS</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
