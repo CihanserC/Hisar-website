@@ -106,7 +106,6 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               alt="Baker at work"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute -bottom-8 -right-8 w-64 h-64 border-4 border-primary/10 rounded-lg -z-0"></div>
           </div>
           <div className="md:col-span-7 space-y-10">
             <h2 className="text-5xl md:text-7xl text-primary font-bold leading-tight">
