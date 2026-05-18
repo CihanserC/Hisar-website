@@ -118,7 +118,7 @@ function categoryDesc(cat: MenuCategory, lang: Language) {
   return cat.description[lang] ?? cat.description.DE;
 }
 
-// ── sub-components ────────────────────────────────────────────────────────────
+// ── sub-components ──────────────────────────────────────────────────────────────────────────────────
 
 function AllergenIcon({ label }: { label: string }) {
   const commonProps = {
