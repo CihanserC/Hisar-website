@@ -68,19 +68,16 @@ export function ContactPage() {
         {/* Branch list overlaid on the map */}
         <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-end p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:block md:p-0">
           <div className="pointer-events-auto mx-auto flex w-full max-w-md flex-col md:absolute md:top-1/2 md:-translate-y-1/2 md:left-12 md:mx-0 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:w-[26rem]">
-            <div className="flex max-h-[min(80vh,36rem)] flex-col overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md">
-              <div className="border-b border-outline-variant/40 px-4 py-3 text-center md:px-5 md:py-4">
-                <h1 className="font-headline text-xl font-bold tracking-tight text-primary md:text-2xl">
+            <div className="overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md">
+              <div className="border-b border-outline-variant/40 px-4 py-3 text-center">
+                <h1 className="font-headline text-xl font-bold tracking-tight text-primary">
                   {t(language, 'footer.locationsTitle')}
                 </h1>
               </div>
 
-              <ul className="min-h-0 flex-1 divide-y divide-outline-variant/30 overflow-y-auto overscroll-contain px-2 py-2">
+              <ul className="divide-y divide-outline-variant/30 px-2 py-1">
                 {stores.map((loc) => {
                   return (
-                    /* group + hover:bg on the <li> so background and child group-hover:
-                       colours all fire from the exact same hovered element.
-                       Hover applies to every item (including the currently selected one). */
                     <li
                       key={loc.id}
                       className="group rounded-xl transition-colors hover:bg-[#d40304]"
@@ -88,7 +85,7 @@ export function ContactPage() {
                       <button
                         type="button"
                         onClick={() => setSelectedStoreId(loc.id)}
-                        className="w-full px-3 py-4 text-left md:px-4"
+                        className="w-full px-3 py-3 text-left"
                       >
                         <span className="flex items-start gap-3">
                           <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-white/20 group-hover:text-white">
@@ -121,7 +118,7 @@ export function ContactPage() {
                 })}
               </ul>
 
-              <div className="border-t border-outline-variant/40 p-3 md:p-4">
+              <div className="border-t border-outline-variant/40 p-3">
                 <a
                   href={mapsLink}
                   target="_blank"
