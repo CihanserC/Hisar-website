@@ -34,13 +34,6 @@ export function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-20 md:px-12 md:py-28">
-          <motion.span
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-body text-sm font-bold uppercase tracking-[0.35em] text-tertiary"
-          >
-            {t(language, 'about.est1982')}
-          </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,11 +63,8 @@ export function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ delay: i * 0.08 }}
-              className="group rounded-2xl border border-outline-variant/40 bg-surface-container-low p-10 shadow-sm transition-shadow hover:shadow-lg"
+              className="group rounded-2xl border border-outline-variant/40 bg-surface-container-low p-10 shadow-sm transition-shadow hover:shadow-lg text-center"
             >
-              <div className="mb-6 inline-flex rounded-xl bg-primary/10 p-4 text-primary transition-colors group-hover:bg-primary/15">
-                {item.icon}
-              </div>
               <h2 className="font-headline text-2xl font-bold text-primary md:text-3xl">{item.title}</h2>
               <p className="mt-4 text-on-surface-variant leading-relaxed">{item.text}</p>
             </motion.article>

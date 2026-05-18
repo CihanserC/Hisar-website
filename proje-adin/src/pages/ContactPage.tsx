@@ -56,7 +56,7 @@ export function ContactPage() {
   return (
     <section className="bg-background pt-32 pb-0 md:pt-36">
       {/* Map block: full bleed horizontally, fixed height so footer stays visible */}
-      <div className="relative h-[70vh] min-h-[28rem] w-full overflow-hidden border-y border-outline-variant/25 md:h-[75vh] md:max-h-[44rem]">
+      <div className="relative h-[70vh] min-h-[28rem] w-full overflow-hidden border-t border-outline-variant/25 md:h-[75vh] md:max-h-[44rem]">
         <iframe
           title={`Google Maps — ${selectedStore.name}`}
           src={mapSrc}
@@ -67,8 +67,8 @@ export function ContactPage() {
 
         {/* Branch list overlaid on the map */}
         <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-end p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:block md:p-0">
-          <div className="pointer-events-auto mx-auto flex w-full max-w-md flex-col md:absolute md:inset-y-0 md:left-12 md:my-6 md:mx-0 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:my-8 lg:w-[26rem]">
-            <div className="flex max-h-[min(80vh,36rem)] flex-col overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md md:max-h-full md:h-full">
+          <div className="pointer-events-auto mx-auto flex w-full max-w-md flex-col md:absolute md:top-1/2 md:-translate-y-1/2 md:left-12 md:mx-0 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:w-[26rem]">
+            <div className="flex max-h-[min(80vh,36rem)] flex-col overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md">
               <div className="border-b border-outline-variant/40 px-4 py-3 text-center md:px-5 md:py-4">
                 <h1 className="font-headline text-xl font-bold tracking-tight text-primary md:text-2xl">
                   {t(language, 'footer.locationsTitle')}
