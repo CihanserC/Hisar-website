@@ -90,7 +90,7 @@ export const translations = {
     'about.body.p3':
       'While all our branches offer fresh pastries and desserts, our Harburg location also serves breakfast, lunch, and dinner, making it a full-day dining destination.',
     'about.body.p4':
-      'Hisar Backhaus is more than a bakery — it is a place where fresh, warm, and carefully crafted flavors are served throughout the day.',
+      'Hisar Backhaus is more than a bakery. It is a place where fresh, warm, and carefully crafted flavors are served throughout the day.',
 
     'about.section.eyebrow': 'Our Story',
     'about.section.heading': 'Where tradition meets craftsmanship',
@@ -103,7 +103,7 @@ export const translations = {
     'about.value1.title': 'Heritage',
     'about.value1.text': 'Generations of family knowledge passed down through every recipe and technique.',
     'about.value2.title': 'Craftsmanship',
-    'about.value2.text': 'A team of artisans from the Balkans, Anatolia, and Europe — each bringing their own mastery.',
+    'about.value2.text': 'A team of artisans from the Balkans, Anatolia, and Europe, each bringing their own mastery.',
     'about.value3.title': 'Warmth',
     'about.value3.text': 'Every product leaves our kitchen warm, fresh, and made with genuine care.',
 

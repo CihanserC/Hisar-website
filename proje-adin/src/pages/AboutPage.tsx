@@ -60,7 +60,7 @@ function ValueCard({
       <span className="absolute -right-4 -top-6 font-headline text-[8rem] font-black leading-none opacity-[0.06] select-none pointer-events-none text-current">
         {String(index + 1).padStart(2, '0')}
       </span>
-      <h3 className="font-headline text-3xl font-black mb-4 leading-tight">{title}</h3>
+      <h3 className="font-headline text-2xl font-black mb-4 leading-tight">{title}</h3>
       <p className="text-base leading-relaxed opacity-80">{text}</p>
     </motion.div>
   );

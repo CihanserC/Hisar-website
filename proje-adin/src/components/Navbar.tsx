@@ -135,6 +135,9 @@ export function Navbar({
                 {link.label}
               </button>
             ))}
+            <div className="pt-4 border-t border-outline-variant/30">
+              <LanguageSelector />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
