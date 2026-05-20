@@ -149,36 +149,37 @@ export function AboutPage() {
             transition={{ duration: 0.55, ease: 'easeOut' }}
             className="mb-16"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.32em] text-tertiary">
-              {t(language, 'about.section.eyebrow')}
-            </span>
-            <h2 className="mt-3 font-headline text-4xl font-black leading-tight text-primary md:text-6xl max-w-3xl">
+            <h2 className="font-headline text-4xl font-black leading-tight text-primary md:text-6xl max-w-3xl">
               {t(language, 'about.section.heading')}
             </h2>
-            <div className="mt-6 h-1 w-16 rounded-full bg-tertiary/40" />
           </motion.div>
 
           {/* Two-column: text + image collage */}
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-20 items-start">
-            {/* Text */}
+            {/* Pillars */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={storyInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
               className="space-y-6"
             >
-              {[
-                t(language, 'about.body.p1'),
-                t(language, 'about.body.p2'),
-                t(language, 'about.body.p3'),
-                t(language, 'about.body.p4'),
-              ].map((para, i) => (
-                <p
-                  key={i}
-                  className={`leading-relaxed ${i === 0 ? 'text-xl font-medium text-on-surface' : 'text-base text-on-surface-variant'}`}
-                >
-                  {para}
-                </p>
+              {(
+                [
+                  ['about.pillar1.title', 'about.pillar1.text'],
+                  ['about.pillar2.title', 'about.pillar2.text'],
+                  ['about.pillar3.title', 'about.pillar3.text'],
+                ] as const
+              ).map(([titleKey, textKey], i) => (
+                <div key={titleKey} className="flex gap-5 items-start">
+                  <div>
+                    <h3 className="font-headline text-xl font-black text-primary mb-1">
+                      {t(language, titleKey)}
+                    </h3>
+                    <p className="text-base leading-relaxed text-on-surface-variant">
+                      {t(language, textKey)}
+                    </p>
+                  </div>
+                </div>
               ))}
             </motion.div>
 
@@ -221,26 +222,6 @@ export function AboutPage() {
       </section>
 
 
-      {/* ── Full-bleed closing image ──────────────────────── */}
-      <section className="relative h-72 overflow-hidden md:h-96">
-        <img
-          src={foodAssortedPastry}
-          alt=""
-          className="h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent" />
-        <div className="absolute inset-0 flex items-end justify-center pb-12 px-6 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="font-headline text-2xl md:text-4xl font-black text-white max-w-2xl leading-snug"
-          >
-            {t(language, 'about.body.p4')}
-          </motion.p>
-        </div>
-      </section>
     </div>
   );
 }

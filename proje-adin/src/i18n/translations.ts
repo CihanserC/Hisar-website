@@ -92,6 +92,16 @@ export const translations = {
     'about.body.p4':
       'Hisar Backhaus is more than a bakery. It is a place where fresh, warm, and carefully crafted flavors are served throughout the day.',
 
+    'about.pillar1.title': 'Crafted for Every Occasion',
+    'about.pillar1.text':
+      'At Hisar Back Haus, we offer a wide range of bakery items that are perfect for any occasion. From our freshly baked breads to our decadent cakes and pastries, each of our products is made with the finest ingredients and the utmost care.',
+    'about.pillar2.title': 'Handcrafted Soul',
+    'about.pillar2.text':
+      'Freshly handcrafted, never factory made. Every store houses its own kitchen and expert bakers, creating warm, artisanal flavors served fresh to your table.',
+    'about.pillar3.title': 'Freshness First',
+    'about.pillar3.text':
+      'Non-stop taste, every single day. Unlike others, our doors open at 5:00 AM and stay warm until 8:30 PM, serving fresh flavors crafted for every craving.',
+
     'about.section.eyebrow': 'Our Story',
     'about.section.heading': 'Where tradition meets craftsmanship',
     'about.stat1.number': '3',
@@ -219,6 +229,16 @@ export const translations = {
       'Während alle unsere Filialen frische Backwaren und Desserts anbieten, serviert unser Standort Harburg auch Frühstück, Mittagessen und Abendessen – ein vollwertiges Gastronomieerlebnis den ganzen Tag.',
     'about.body.p4':
       'Hisar Backhaus ist mehr als eine Bäckerei – es ist ein Ort, an dem frische, warme und sorgfältig zubereitete Aromen den ganzen Tag genossen werden.',
+
+    'about.pillar1.title': 'Für jeden Anlass',
+    'about.pillar1.text':
+      'Bei Hisar Back Haus bieten wir eine breite Auswahl an Backwaren, die sich für jeden Anlass eignen. Von frisch gebackenem Brot bis hin zu köstlichen Kuchen und Gebäck, jedes unserer Produkte wird aus den feinsten Zutaten und mit größter Sorgfalt hergestellt.',
+    'about.pillar2.title': 'Handwerkliche Seele',
+    'about.pillar2.text':
+      'Frisch handgemacht, niemals aus der Fabrik. Jede Filiale hat ihre eigene Küche und erfahrene Bäcker, die warme, handwerkliche Aromen frisch an Ihren Tisch bringen.',
+    'about.pillar3.title': 'Frische zuerst',
+    'about.pillar3.text':
+      'Non-Stop-Genuss, jeden einzelnen Tag. Anders als andere öffnen wir unsere Türen um 5:00 Uhr morgens und bleiben bis 20:30 Uhr geöffnet, mit frischen Aromen für jeden Geschmack.',
 
     'about.section.eyebrow': 'Unsere Geschichte',
     'about.section.heading': 'Wo Tradition auf Handwerk trifft',
