@@ -83,6 +83,30 @@ export const translations = {
     'about.storyParagraph1':
       'Our story is written in the golden crust of every loaf. For three generations, the Hisar family has honored the sacred alchemy of flour, water, and fire—bringing the authentic soul of artisanal baking to the heart of Germany.',
 
+    'about.body.p1':
+      'Hisar Backhaus is a unique bakery concept in Hamburg that combines traditional Turkish baking heritage with modern German bakery craftsmanship. Built on generations of family experience, it has grown through a skilled team of artisans from different countries.',
+    'about.body.p2':
+      'All products are freshly prepared daily in our in-house kitchens and served warm across all branches. Our bakers from the Balkans, Anatolia, and across Europe bring their craftsmanship into every product.',
+    'about.body.p3':
+      'While all our branches offer fresh pastries and desserts, our Harburg location also serves breakfast, lunch, and dinner, making it a full-day dining destination.',
+    'about.body.p4':
+      'Hisar Backhaus is more than a bakery — it is a place where fresh, warm, and carefully crafted flavors are served throughout the day.',
+
+    'about.section.eyebrow': 'Our Story',
+    'about.section.heading': 'Where tradition meets craftsmanship',
+    'about.stat1.number': '3',
+    'about.stat1.label': 'Locations in Hamburg',
+    'about.stat2.number': '100%',
+    'about.stat2.label': 'Fresh Every Day',
+    'about.stat3.number': '∞',
+    'about.stat3.label': 'Handmade with Care',
+    'about.value1.title': 'Heritage',
+    'about.value1.text': 'Generations of family knowledge passed down through every recipe and technique.',
+    'about.value2.title': 'Craftsmanship',
+    'about.value2.text': 'A team of artisans from the Balkans, Anatolia, and Europe — each bringing their own mastery.',
+    'about.value3.title': 'Warmth',
+    'about.value3.text': 'Every product leaves our kitchen warm, fresh, and made with genuine care.',
+
     'contact.letsConnect': "Let's Connect",
     'contact.getInTouch': 'Get in touch',
     'contact.intro':
@@ -192,9 +216,24 @@ export const translations = {
     'about.body.p2':
       'Alle Produkte werden täglich frisch in unseren eigenen Küchen zubereitet und warm in allen Filialen serviert. Unsere Bäcker aus dem Balkan, Anatolien und ganz Europa bringen ihr Handwerk in jedes einzelne Produkt ein.',
     'about.body.p3':
-      'Während alle unsere Filialen frische Backwaren und Desserts anbieten, serviert unser Standort Harburg auch Frühstück, Mittagessen und Abendessen ein vollwertiges Gastronomieerlebnis den ganzen Tag.',
+      'Während alle unsere Filialen frische Backwaren und Desserts anbieten, serviert unser Standort Harburg auch Frühstück, Mittagessen und Abendessen – ein vollwertiges Gastronomieerlebnis den ganzen Tag.',
     'about.body.p4':
-      'Hisar Backhaus ist mehr als eine Bäckerei, es ist ein Ort, an dem frische, warme und sorgfältig zubereitete Aromen den ganzen Tag genossen werden.',
+      'Hisar Backhaus ist mehr als eine Bäckerei – es ist ein Ort, an dem frische, warme und sorgfältig zubereitete Aromen den ganzen Tag genossen werden.',
+
+    'about.section.eyebrow': 'Unsere Geschichte',
+    'about.section.heading': 'Wo Tradition auf Handwerk trifft',
+    'about.stat1.number': '3',
+    'about.stat1.label': 'Standorte in Hamburg',
+    'about.stat2.number': '100%',
+    'about.stat2.label': 'Täglich frisch',
+    'about.stat3.number': '∞',
+    'about.stat3.label': 'Mit Herzblut handgemacht',
+    'about.value1.title': 'Erbe',
+    'about.value1.text': 'Generationenwissen, das in jedes Rezept und jede Technik eingeflossen ist.',
+    'about.value2.title': 'Handwerk',
+    'about.value2.text': 'Ein Team aus Handwerkern vom Balkan, aus Anatolien und Europa – jeder mit seiner eigenen Meisterschaft.',
+    'about.value3.title': 'Wärme',
+    'about.value3.text': 'Jedes Produkt verlässt unsere Küche warm, frisch und mit echter Sorgfalt zubereitet.',
 
     'contact.letsConnect': 'Lassen Sie uns Kontakt aufnehmen',
     'contact.getInTouch': 'Kontakt aufnehmen',

@@ -1,28 +1,107 @@
-import { motion } from 'motion/react';
-import { Hand, Leaf, Timer } from 'lucide-react';
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
 
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 
+import foodBorekSlice from '../assets/foods/jpg/IMG_7594.jpg';
+import foodCroissantStack from '../assets/foods/jpg/IMG_7610.jpg';
+import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';
+import foodBaklavaTray from '../assets/foods/jpg/IMG_7596.jpg';
+import foodBreadBasket from '../assets/foods/jpg/IMG_7924.jpg';
+import foodPastryCase from '../assets/foods/jpg/IMG_7923.jpg';
+
+function StatCard({
+  number,
+  label,
+  delay,
+}: {
+  number: string;
+  label: string;
+  delay: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: '-60px' });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.55, delay, ease: 'easeOut' }}
+      className="flex flex-col items-center gap-2 py-10 px-6"
+    >
+      <span className="font-headline text-6xl font-black text-primary leading-none">{number}</span>
+      <span className="text-sm font-bold uppercase tracking-[0.22em] text-on-surface-variant text-center">{label}</span>
+    </motion.div>
+  );
+}
+
+function ValueCard({
+  title,
+  text,
+  index,
+  accent,
+}: {
+  title: string;
+  text: string;
+  index: number;
+  accent: string;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: '-60px' });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 28 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
+      className={`relative overflow-hidden rounded-3xl p-10 ${accent}`}
+    >
+      <span className="absolute -right-4 -top-6 font-headline text-[8rem] font-black leading-none opacity-[0.06] select-none pointer-events-none text-current">
+        {String(index + 1).padStart(2, '0')}
+      </span>
+      <h3 className="font-headline text-3xl font-black mb-4 leading-tight">{title}</h3>
+      <p className="text-base leading-relaxed opacity-80">{text}</p>
+    </motion.div>
+  );
+}
+
 export function AboutPage() {
   const { language } = useLanguage();
 
-  const pillars = [
-    { title: t(language, 'about.rawReal.title'), icon: <Leaf className="h-8 w-8" />, text: t(language, 'about.rawReal.text') },
+  const stats = [
+    { number: t(language, 'about.stat1.number'), label: t(language, 'about.stat1.label') },
+    { number: t(language, 'about.stat2.number'), label: t(language, 'about.stat2.label') },
+    { number: t(language, 'about.stat3.number'), label: t(language, 'about.stat3.label') },
+  ];
+
+  const values = [
     {
-      title: t(language, 'about.handcraftedSoul.title'),
-      icon: <Hand className="h-8 w-8" />,
-      text: t(language, 'about.handcraftedSoul.text'),
+      title: t(language, 'about.value1.title'),
+      text: t(language, 'about.value1.text'),
+      accent: 'bg-primary text-white',
     },
     {
-      title: t(language, 'about.freshnessFirst.title'),
-      icon: <Timer className="h-8 w-8" />,
-      text: t(language, 'about.freshnessFirst.text'),
+      title: t(language, 'about.value2.title'),
+      text: t(language, 'about.value2.text'),
+      accent: 'bg-surface-container-high text-on-surface',
+    },
+    {
+      title: t(language, 'about.value3.title'),
+      text: t(language, 'about.value3.text'),
+      accent: 'bg-tertiary/10 text-tertiary',
     },
   ];
 
+  const galleryRef = useRef<HTMLDivElement>(null);
+  const galleryInView = useInView(galleryRef, { once: true, margin: '-80px' });
+
+  const storyRef = useRef<HTMLDivElement>(null);
+  const storyInView = useInView(storyRef, { once: true, margin: '-80px' });
+
   return (
     <div className="bg-background">
+      {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-[70vh] overflow-hidden pt-28 md:pt-32">
         <div className="absolute inset-0 z-0">
           <img
@@ -31,7 +110,7 @@ export function AboutPage() {
             alt=""
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-20 md:px-12 md:py-28">
           <motion.h1
@@ -57,21 +136,125 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="border-t border-outline-variant/30 bg-surface px-6 py-24 md:px-12 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-3 md:gap-10">
-          {pillars.map((item, i) => (
-            <motion.article
-              key={item.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ delay: i * 0.08 }}
-              className="group rounded-2xl border border-outline-variant/40 bg-surface-container-low p-10 shadow-sm transition-shadow hover:shadow-lg text-center"
-            >
-              <h2 className="font-headline text-2xl font-bold text-primary md:text-3xl">{item.title}</h2>
-              <p className="mt-4 text-on-surface-variant leading-relaxed">{item.text}</p>
-            </motion.article>
+      {/* ── Stats bar ────────────────────────────────────── */}
+      <section className="border-y border-outline-variant/30 bg-surface-container-low">
+        <div className="mx-auto max-w-7xl grid grid-cols-3 divide-x divide-outline-variant/30">
+          {stats.map((s, i) => (
+            <StatCard key={s.label} number={s.number} label={s.label} delay={i * 0.1} />
           ))}
+        </div>
+      </section>
+
+      {/* ── Story + Gallery ──────────────────────────────── */}
+      <section className="bg-surface px-6 py-24 md:px-12 md:py-32">
+        <div className="mx-auto max-w-7xl">
+
+          {/* Eyebrow + heading */}
+          <motion.div
+            ref={storyRef}
+            initial={{ opacity: 0, y: 24 }}
+            animate={storyInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55, ease: 'easeOut' }}
+            className="mb-16"
+          >
+            <span className="text-xs font-bold uppercase tracking-[0.32em] text-tertiary">
+              {t(language, 'about.section.eyebrow')}
+            </span>
+            <h2 className="mt-3 font-headline text-4xl font-black leading-tight text-primary md:text-6xl max-w-3xl">
+              {t(language, 'about.section.heading')}
+            </h2>
+            <div className="mt-6 h-1 w-16 rounded-full bg-tertiary/40" />
+          </motion.div>
+
+          {/* Two-column: text + image collage */}
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-20 items-start">
+            {/* Text */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={storyInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+              className="space-y-6"
+            >
+              {[
+                t(language, 'about.body.p1'),
+                t(language, 'about.body.p2'),
+                t(language, 'about.body.p3'),
+                t(language, 'about.body.p4'),
+              ].map((para, i) => (
+                <p
+                  key={i}
+                  className={`leading-relaxed ${i === 0 ? 'text-xl font-medium text-on-surface' : 'text-base text-on-surface-variant'}`}
+                >
+                  {para}
+                </p>
+              ))}
+            </motion.div>
+
+            {/* Image collage */}
+            <motion.div
+              ref={galleryRef}
+              initial={{ opacity: 0, x: 30 }}
+              animate={galleryInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+              className="grid grid-cols-2 gap-3 md:gap-4"
+            >
+              <img
+                src={foodBorekSlice}
+                alt=""
+                className="col-span-2 h-56 w-full rounded-2xl object-cover md:h-64"
+              />
+              <img
+                src={foodCroissantStack}
+                alt=""
+                className="h-40 w-full rounded-2xl object-cover md:h-48"
+              />
+              <img
+                src={foodBaklavaTray}
+                alt=""
+                className="h-40 w-full rounded-2xl object-cover md:h-48"
+              />
+              <img
+                src={foodBreadBasket}
+                alt=""
+                className="h-40 w-full rounded-2xl object-cover md:h-48"
+              />
+              <img
+                src={foodPastryCase}
+                alt=""
+                className="h-40 w-full rounded-2xl object-cover md:h-48"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Value cards ──────────────────────────────────── */}
+      <section className="bg-background px-6 pb-28 md:px-12 md:pb-36">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 gap-5 md:grid-cols-3">
+          {values.map((v, i) => (
+            <ValueCard key={v.title} title={v.title} text={v.text} index={i} accent={v.accent} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── Full-bleed closing image ──────────────────────── */}
+      <section className="relative h-72 overflow-hidden md:h-96">
+        <img
+          src={foodAssortedPastry}
+          alt=""
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent" />
+        <div className="absolute inset-0 flex items-end justify-center pb-12 px-6 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="font-headline text-2xl md:text-4xl font-black text-white max-w-2xl leading-snug"
+          >
+            {t(language, 'about.body.p4')}
+          </motion.p>
         </div>
       </section>
     </div>
