@@ -136,14 +136,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* ── Stats bar ────────────────────────────────────── */}
-      <section className="border-y border-outline-variant/30 bg-surface-container-low">
-        <div className="mx-auto max-w-7xl grid grid-cols-3 divide-x divide-outline-variant/30">
-          {stats.map((s, i) => (
-            <StatCard key={s.label} number={s.number} label={s.label} delay={i * 0.1} />
-          ))}
-        </div>
-      </section>
 
       {/* ── Story + Gallery ──────────────────────────────── */}
       <section className="bg-surface px-6 py-24 md:px-12 md:py-32">
@@ -228,14 +220,6 @@ export function AboutPage() {
         </div>
       </section>
 
-      {/* ── Value cards ──────────────────────────────────── */}
-      <section className="bg-background px-6 pb-28 md:px-12 md:pb-36">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 gap-5 md:grid-cols-3">
-          {values.map((v, i) => (
-            <ValueCard key={v.title} title={v.title} text={v.text} index={i} accent={v.accent} />
-          ))}
-        </div>
-      </section>
 
       {/* ── Full-bleed closing image ──────────────────────── */}
       <section className="relative h-72 overflow-hidden md:h-96">
