@@ -187,6 +187,15 @@ export const translations = {
     'about.storyParagraph1':
       'Unsere Geschichte steht in der goldenen Kruste jedes Laibs. Seit drei Generationen ehrt die Hisar-Familie die heilige Alchemie aus Mehl, Wasser und Feuer – und bringt die echte Seele des handwerklichen Backens ins Herz Deutschlands.',
 
+    'about.body.p1':
+      'Hisar Backhaus ist ein einzigartiges Bäckereikonzept in Hamburg, das türkisches Backerbe mit modernem deutschen Bäckerhandwerk vereint. Aufgebaut auf generationenlanger Familienerfahrung ist es durch ein engagiertes Team von Handwerkern aus verschiedenen Ländern gewachsen.',
+    'about.body.p2':
+      'Alle Produkte werden täglich frisch in unseren eigenen Küchen zubereitet und warm in allen Filialen serviert. Unsere Bäcker aus dem Balkan, Anatolien und ganz Europa bringen ihr Handwerk in jedes einzelne Produkt ein.',
+    'about.body.p3':
+      'Während alle unsere Filialen frische Backwaren und Desserts anbieten, serviert unser Standort Harburg auch Frühstück, Mittagessen und Abendessen ein vollwertiges Gastronomieerlebnis den ganzen Tag.',
+    'about.body.p4':
+      'Hisar Backhaus ist mehr als eine Bäckerei, es ist ein Ort, an dem frische, warme und sorgfältig zubereitete Aromen den ganzen Tag genossen werden.',
+
     'contact.letsConnect': 'Lassen Sie uns Kontakt aufnehmen',
     'contact.getInTouch': 'Kontakt aufnehmen',
     'contact.intro':

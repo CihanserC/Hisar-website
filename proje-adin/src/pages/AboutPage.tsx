@@ -43,14 +43,17 @@ export function AboutPage() {
             {t(language, 'about.hearthTitle1')} <br />
             <span className="italic text-white/90">{t(language, 'about.hearthTitle2')}</span>
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16 }}
-            className="mt-10 max-w-2xl text-xl leading-relaxed text-white/85"
+            className="mt-10 max-w-2xl space-y-5"
           >
-            {t(language, 'about.storyParagraph1')}
-          </motion.p>
+            <p className="text-lg leading-relaxed text-white/90">{t(language, 'about.body.p1')}</p>
+            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p2')}</p>
+            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p3')}</p>
+            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p4')}</p>
+          </motion.div>
         </div>
       </section>
 
