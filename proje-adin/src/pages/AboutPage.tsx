@@ -8,8 +8,7 @@ import foodBorekSlice from '../assets/foods/jpg/IMG_7594.jpg';
 import foodCroissantStack from '../assets/foods/jpg/IMG_7610.jpg';
 import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';
 import foodBaklavaTray from '../assets/foods/jpg/IMG_7596.jpg';
-import foodBreadBasket from '../assets/foods/jpg/IMG_7924.jpg';
-import foodPastryCase from '../assets/foods/jpg/IMG_7923.jpg';
+
 
 function StatCard({
   number,
@@ -203,16 +202,6 @@ export function AboutPage() {
               />
               <img
                 src={foodBaklavaTray}
-                alt=""
-                className="h-40 w-full rounded-2xl object-cover md:h-48"
-              />
-              <img
-                src={foodBreadBasket}
-                alt=""
-                className="h-40 w-full rounded-2xl object-cover md:h-48"
-              />
-              <img
-                src={foodPastryCase}
                 alt=""
                 className="h-40 w-full rounded-2xl object-cover md:h-48"
               />
