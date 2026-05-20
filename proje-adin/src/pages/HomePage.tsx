@@ -106,7 +106,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           <div className="md:col-span-5 relative">
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
             <img
-              className="w-full aspect-[4/5] object-cover rounded-lg shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-1000"
+              className="w-full aspect-[4/5] object-cover rounded-lg relative z-10 grayscale hover:grayscale-0 transition-all duration-1000"
               src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800"
               alt="Baker at work"
               referrerPolicy="no-referrer"
@@ -136,18 +136,15 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       </section>
 
       {/* Menu Highlights */}
-      <section className="py-32 bg-surface">
+      <section className="py-16 bg-surface">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="mb-24 text-center max-w-3xl mx-auto">
-            <span className="text-tertiary font-bold tracking-widest uppercase">
-              {t(language, 'menuHighlights.selection')}
-            </span>
-            <h2 className="text-6xl md:text-8xl text-primary font-black mt-6 tracking-tighter">
+          <div className="mb-12 text-center max-w-3xl mx-auto">
+            <h2 className="text-5xl md:text-6xl text-primary font-black mt-4 tracking-tighter">
               {t(language, 'menuHighlights.bakedWithHeart')}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-8 h-auto md:h-[1000px]">
+          <div className="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 h-auto md:h-[680px]">
             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
@@ -156,17 +153,17 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-              <div className="absolute bottom-12 left-12 text-white">
-                <p className="uppercase tracking-widest text-sm mb-4 opacity-80 font-bold">
+              <div className="absolute bottom-8 left-8 text-white">
+                <p className="uppercase tracking-widest text-xs mb-3 opacity-80 font-bold">
                   {t(language, 'menuHighlights.signatureLabel')}
                 </p>
-                <h3 className="text-6xl font-bold">
+                <h3 className="text-4xl font-bold">
                   {t(language, 'menuHighlights.signatureTitle')}
                 </h3>
-                <p className="mt-6 max-w-xs opacity-90 text-lg">{t(language, 'menuHighlights.signatureDesc')}</p>
+                <p className="mt-3 max-w-xs opacity-90 text-base">{t(language, 'menuHighlights.signatureDesc')}</p>
                 <button
                   onClick={() => setPage('menu')}
-                  className="mt-10 bg-white text-primary px-10 py-4 rounded-full font-bold hover:bg-background transition-colors"
+                  className="mt-6 bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-background transition-colors"
                 >
                   {t(language, 'menuHighlights.exploreBakery')}
                 </button>
@@ -182,10 +179,10 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
-                <h3 className="text-5xl text-white font-bold">
+                <h3 className="text-3xl text-white font-bold">
                   {t(language, 'menuHighlights.pastriesTitle')}
                 </h3>
-                <p className="text-white mt-4 opacity-90 text-xl">
+                <p className="text-white mt-3 opacity-90 text-base">
                   {t(language, 'menuHighlights.pastriesDesc')}
                 </p>
               </div>

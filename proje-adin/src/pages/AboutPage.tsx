@@ -5,10 +5,10 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 
 import aboutHeroBg from '../assets/about-us/IMG_7950.jpg';
-import aboutCookies from '../assets/about-us/IMG_7602.jpg';
-import foodCroissantStack from '../assets/foods/jpg/IMG_7610.jpg';
+import aboutSlider3 from '../assets/about-us/slider3.jpg';
+import aboutSlider2 from '../assets/about-us/slider2.jpg';
 import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';
-import foodBaklavaTray from '../assets/foods/jpg/IMG_7596.jpg';
+import aboutBaklava from '../assets/about-us/IMG_7597.jpg';
 
 
 function StatCard({
@@ -190,18 +190,20 @@ export function AboutPage() {
               transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
               className="grid grid-cols-2 gap-3 md:gap-4"
             >
+              <div className="col-span-2 h-56 md:h-64 w-full rounded-2xl overflow-hidden">
+                <img
+                  src={aboutBaklava}
+                  alt=""
+                  className="h-full w-full object-cover scale-125 object-center"
+                />
+              </div>
               <img
-                src={aboutCookies}
-                alt=""
-                className="col-span-2 h-56 w-full rounded-2xl object-cover md:h-64"
-              />
-              <img
-                src={foodCroissantStack}
+                src={aboutSlider3}
                 alt=""
                 className="h-40 w-full rounded-2xl object-cover md:h-48"
               />
               <img
-                src={foodBaklavaTray}
+                src={aboutSlider2}
                 alt=""
                 className="h-40 w-full rounded-2xl object-cover md:h-48"
               />
