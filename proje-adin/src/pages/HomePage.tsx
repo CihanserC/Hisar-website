@@ -89,9 +89,14 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             {t(language, 'home.viewOurMenu')}
           </motion.button>
         </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce">
+        <button
+          type="button"
+          aria-label="Scroll down"
+          onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white animate-bounce cursor-pointer"
+        >
           <ChevronDown size={40} />
-        </div>
+        </button>
       </header>
 
       <div className="font-playfair">

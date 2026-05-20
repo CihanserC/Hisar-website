@@ -4,7 +4,8 @@ import { useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 
-import foodBorekSlice from '../assets/foods/jpg/IMG_7594.jpg';
+import aboutHeroBg from '../assets/about-us/IMG_7950.jpg';
+import aboutCookies from '../assets/about-us/IMG_7602.jpg';
 import foodCroissantStack from '../assets/foods/jpg/IMG_7610.jpg';
 import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';
 import foodBaklavaTray from '../assets/foods/jpg/IMG_7596.jpg';
@@ -105,9 +106,8 @@ export function AboutPage() {
         <div className="absolute inset-0 z-0">
           <img
             className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1920"
+            src={aboutHeroBg}
             alt=""
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
@@ -191,7 +191,7 @@ export function AboutPage() {
               className="grid grid-cols-2 gap-3 md:gap-4"
             >
               <img
-                src={foodBorekSlice}
+                src={aboutCookies}
                 alt=""
                 className="col-span-2 h-56 w-full rounded-2xl object-cover md:h-64"
               />
