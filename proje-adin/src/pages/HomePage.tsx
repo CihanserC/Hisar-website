@@ -9,6 +9,7 @@ import highlightBread from '../assets/foods/jpg/IMG_7924.jpg';
 import highlightPastries from '../assets/foods/jpg/IMG_7610.jpg';
 import highlightCafe from '../assets/foods/jpg/IMG_7923.jpg';
 import highlightSavory from '../assets/foods/jpg/IMG_7656.jpg';
+import storyBaker from '../assets/foods/jpg/IMG_7649.jpg';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -110,10 +111,9 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
           <div className="md:col-span-5 relative">
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
             <img
-              className="w-full aspect-[4/5] object-cover rounded-lg relative z-10 grayscale hover:grayscale-0 transition-all duration-1000"
-              src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800"
-              alt="Baker at work"
-              referrerPolicy="no-referrer"
+              className="w-full aspect-[4/5] object-cover rounded-lg relative z-10"
+              src={storyBaker}
+              alt="Fresh Turkish pastries at Hisar Backhaus"
             />
           </div>
           <div className="md:col-span-7 space-y-10">

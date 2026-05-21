@@ -12,19 +12,29 @@ import { MenuPage } from './pages/MenuPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import heroVideo from './assets/videos/website-hisar.mp4';
+import aboutHeroBgWebp from './assets/about-us/about-us-top.webp';
 
 export default function App() {
   const [page, setPage] = useState<Page>('home');
 
   useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'video';
-    link.href = heroVideo;
-    link.type = 'video/mp4';
-    document.head.appendChild(link);
+    const videoLink = document.createElement('link');
+    videoLink.rel = 'preload';
+    videoLink.as = 'video';
+    videoLink.href = heroVideo;
+    videoLink.type = 'video/mp4';
+    document.head.appendChild(videoLink);
+
+    const aboutHeroLink = document.createElement('link');
+    aboutHeroLink.rel = 'preload';
+    aboutHeroLink.as = 'image';
+    aboutHeroLink.href = aboutHeroBgWebp;
+    aboutHeroLink.type = 'image/webp';
+    document.head.appendChild(aboutHeroLink);
+
     return () => {
-      document.head.removeChild(link);
+      document.head.removeChild(videoLink);
+      document.head.removeChild(aboutHeroLink);
     };
   }, []);
 

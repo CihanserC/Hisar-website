@@ -4,7 +4,8 @@ import { useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 
-import aboutHeroBg from '../assets/about-us/about-us-top.png';
+import aboutHeroBgJpg from '../assets/about-us/about-us-top.jpg';
+import aboutHeroBgWebp from '../assets/about-us/about-us-top.webp';
 import aboutSlider3 from '../assets/about-us/slider3.jpg';
 import aboutSlider2 from '../assets/about-us/slider2.jpg';
 import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';
@@ -104,11 +105,16 @@ export function AboutPage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-[70vh] overflow-hidden pt-28 md:pt-32">
         <div className="absolute inset-0 z-0">
-          <img
-            className="h-full w-full object-cover"
-            src={aboutHeroBg}
-            alt=""
-          />
+          <picture>
+            <source srcSet={aboutHeroBgWebp} type="image/webp" />
+            <img
+              className="h-full w-full object-cover"
+              src={aboutHeroBgJpg}
+              alt=""
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
         <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-20 md:px-12 md:py-28">
