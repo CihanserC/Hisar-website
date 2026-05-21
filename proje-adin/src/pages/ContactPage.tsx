@@ -70,7 +70,7 @@ export function ContactPage() {
           <div className="pointer-events-auto mx-auto flex w-full max-w-md flex-col md:absolute md:top-1/2 md:-translate-y-1/2 md:left-12 md:mx-0 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:w-[26rem]">
             <div className="overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md">
               <div className="border-b border-outline-variant/40 px-4 py-3 text-center">
-                <h1 className="font-headline text-xl font-bold tracking-tight text-primary">
+                <h1 className="font-headline text-xl font-bold tracking-tight text-tertiary">
                   {t(language, 'footer.locationsTitle')}
                 </h1>
               </div>
@@ -88,12 +88,12 @@ export function ContactPage() {
                         className="w-full px-3 py-3 text-left"
                       >
                         <span className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary transition-colors group-hover:bg-white/20 group-hover:text-white">
+                          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tertiary/10 text-tertiary transition-colors group-hover:bg-white/20 group-hover:text-white">
                             <MapPin className="h-4 w-4" aria-hidden />
                           </span>
                           <span className="min-w-0 flex-1">
                             <span className="flex items-center justify-between gap-2">
-                              <span className="font-headline text-lg font-semibold text-primary transition-colors group-hover:text-white md:text-xl">
+                              <span className="font-headline text-lg font-semibold text-tertiary transition-colors group-hover:text-white md:text-xl">
                                 {loc.name}
                               </span>
                               <ChevronRight

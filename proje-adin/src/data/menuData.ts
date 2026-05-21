@@ -167,9 +167,9 @@ const iceceklerItems: MenuItem[] = [
 export const menuData: MenuCategory[] = [
   {
     id: 'kahvalti',
-    color: 'text-amber-900',
-    bgColor: 'bg-amber-50 border-amber-200',
-    name: { TR: 'Kahvaltı', DE: 'Kahvaltı', EN: 'Breakfast' },
+    color: 'text-red-900',
+    bgColor: 'bg-red-50 border-red-200',
+    name: { TR: 'Kahvaltı', DE: 'Frühstück', EN: 'Breakfast' },
     description: {
       TR: 'Taze somun ve açma ile hazırlanan kahvaltılık sandviçler.',
       DE: 'Frische Frühstückssandwiches mit Somun und Açma.',
@@ -179,9 +179,9 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'hamur-isleri',
-    color: 'text-orange-900',
-    bgColor: 'bg-orange-50 border-orange-200',
-    name: { TR: 'Hamur İşleri', DE: 'Hamur İşleri', EN: 'Pastries' },
+    color: 'text-red-950',
+    bgColor: 'bg-red-50 border-red-200',
+    name: { TR: 'Hamur İşleri', DE: 'Gebäck', EN: 'Pastries' },
     description: {
       TR: 'Açma, börek, poğaça, simit ve örme – fırından taze.',
       DE: 'Açma, Börek, Poğaça, Simit und Örme – frisch aus dem Ofen.',
@@ -193,7 +193,7 @@ export const menuData: MenuCategory[] = [
     id: 'sicak-yemek',
     color: 'text-red-900',
     bgColor: 'bg-red-50 border-red-200',
-    name: { TR: 'Sıcak Yemek', DE: 'Sıcak Yemek', EN: 'Hot Dishes' },
+    name: { TR: 'Sıcak Yemek', DE: 'Warme Gerichte', EN: 'Hot Dishes' },
     description: {
       TR: 'Pizza, Karadeniz pide ve gözleme – sıcak servis.',
       DE: 'Pizza, Karadeniz-Pide und Gözleme – heiß serviert.',
@@ -203,9 +203,9 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'ekmekler',
-    color: 'text-stone-800',
-    bgColor: 'bg-stone-100 border-stone-300',
-    name: { TR: 'Ekmekler', DE: 'Ekmekler', EN: 'Breads' },
+    color: 'text-black',
+    bgColor: 'bg-gray-50 border-gray-300',
+    name: { TR: 'Ekmekler', DE: 'Brote', EN: 'Breads' },
     description: {
       TR: 'Günlük taze somun, pide ve ekmek çeşitleri.',
       DE: 'Täglich frische Somun-, Pide- und Brotvariationen.',
@@ -215,8 +215,8 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'turk-tatlilari',
-    color: 'text-amber-800',
-    bgColor: 'bg-amber-50 border-amber-300',
+    color: 'text-red-900',
+    bgColor: 'bg-red-50 border-red-200',
     name: { TR: 'Türk Tatlıları', DE: 'Türkische Süßigkeiten', EN: 'Turkish Desserts' },
     description: {
       TR: 'Baklava, şekerpare, revani ve geleneksel tatlılar.',
@@ -227,8 +227,8 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'alman-tatlilari',
-    color: 'text-rose-900',
-    bgColor: 'bg-rose-50 border-rose-200',
+    color: 'text-red-900',
+    bgColor: 'bg-red-50 border-red-200',
     name: { TR: 'Alman Tatlıları', DE: 'Deutsche Süßigkeiten', EN: 'German Pastries' },
     description: {
       TR: 'Ekler, kek ve Avrupa tarzı tatlı hamur işleri.',
@@ -239,8 +239,8 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'kahve',
-    color: 'text-[#4a3728]',
-    bgColor: 'bg-[#f5ebe0] border-[#d4b896]',
+    color: 'text-[#7a0d0e]',
+    bgColor: 'bg-gray-50 border-gray-200',
     name: { TR: 'Kahve', DE: 'Kaffee', EN: 'Coffee' },
     description: {
       TR: 'Türk kahvesinden espresso çeşitlerine.',
@@ -251,8 +251,8 @@ export const menuData: MenuCategory[] = [
   },
   {
     id: 'icecekler',
-    color: 'text-cyan-900',
-    bgColor: 'bg-cyan-50 border-cyan-200',
+    color: 'text-black',
+    bgColor: 'bg-gray-50 border-gray-200',
     name: { TR: 'İçecekler', DE: 'Getränke', EN: 'Drinks' },
     description: {
       TR: 'Çay, ayran, meyve suları ve soğuk içecekler.',
@@ -264,9 +264,9 @@ export const menuData: MenuCategory[] = [
 ];
 
 export const allergenColors: Record<string, string> = {
-  Gluten: 'bg-amber-100 text-amber-800 border-amber-300',
+  Gluten: 'bg-red-50 text-red-900 border-red-200',
   Milch: 'bg-blue-100 text-blue-800 border-blue-300',
-  Ei: 'bg-orange-100 text-orange-800 border-orange-300',
+  Ei: 'bg-gray-100 text-gray-900 border-gray-300',
   Sesam: 'bg-green-100 text-green-800 border-green-300',
   Fisch: 'bg-cyan-100 text-cyan-800 border-cyan-300',
   Nüsse: 'bg-yellow-100 text-yellow-900 border-yellow-300',

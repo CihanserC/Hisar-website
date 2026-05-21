@@ -154,7 +154,7 @@ export function AboutPage() {
             transition={{ duration: 0.55, ease: 'easeOut' }}
             className="mb-16"
           >
-            <h2 className="font-headline text-4xl font-black leading-tight text-primary md:text-6xl max-w-3xl">
+            <h2 className="font-headline text-4xl font-black leading-tight text-tertiary md:text-6xl max-w-3xl">
               {t(language, 'about.section.heading')}
             </h2>
           </motion.div>
@@ -177,7 +177,7 @@ export function AboutPage() {
               ).map(([titleKey, textKey], i) => (
                 <div key={titleKey} className="flex gap-5 items-start">
                   <div>
-                    <h3 className="font-headline text-xl font-black text-primary mb-1">
+                    <h3 className="font-headline text-xl font-black text-tertiary mb-1">
                       {t(language, titleKey)}
                     </h3>
                     <p className="text-base leading-relaxed text-on-surface-variant">

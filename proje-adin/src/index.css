@@ -53,18 +53,18 @@
   --font-playfair: "Playfair Display", serif;
   --font-nav: "Gotham", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --color-primary: #513316;
-  --color-primary-container: #6b492b;
-  --color-secondary: #805524;
-  --color-tertiary: #741009;
-  --color-background: #fcf9f0;
-  --color-surface: #fcf9f0;
-  --color-surface-container: #f1eee5;
-  --color-surface-container-low: #f7f3ea;
-  --color-surface-container-high: #ebe8df;
+  --color-primary: #7a0d0e;
+  --color-primary-container: #5c0a0b;
+  --color-secondary: #1c1c16;
+  --color-tertiary: #d40304;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-container: #f5f5f5;
+  --color-surface-container-low: #fafafa;
+  --color-surface-container-high: #ebebeb;
   --color-on-surface: #1c1c16;
-  --color-on-surface-variant: #50453c;
-  --color-outline-variant: #d4c3b8;
+  --color-on-surface-variant: #2a2a2a;
+  --color-outline-variant: #d4d4d4;
 }
 
 @layer base {
@@ -75,7 +75,7 @@
 
 @layer components {
   .glass-nav {
-    @apply bg-[#fdfbf7]/80 backdrop-blur-md;
+    @apply bg-white/80 backdrop-blur-md;
   }
   
   .editorial-shadow {

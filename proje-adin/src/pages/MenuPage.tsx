@@ -254,7 +254,7 @@ export function MenuPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-tertiary pt-32 md:pt-40 pb-16 md:pb-20">
+      <header className="bg-[#7a0d0e] pt-32 md:pt-40 pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/60 mb-4">{copy.eyebrow}</p>
           <h1 className="font-headline text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
