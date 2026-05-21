@@ -13,7 +13,7 @@ export const translations = {
     'home.storyFreshBaking': 'Fresh Baking',
     'home.storyTagline': 'Freshly baked in Hamburg, never frozen, never reheated.',
     'home.storyParagraph1':
-      'For generations, our family has refined the art of baking, combining the warmth of Turkish tradition with the precision of German craftsmanship—a fusion that has become the soul of Hisar Backhaus.',
+      'For generations, our family has refined the art of baking, combining the warmth of Turkish tradition with the precision of German craftsmanship, a fusion that has become the soul of Hisar Backhaus.',
     'home.storyParagraph2':
       'At Hisar Backhaus, every branch has its own kitchen, where dough is prepared, baked, and served fresh throughout the day. We unite traditional Anatolian baking heritage with modern European pastry artistry to create flavors that feel both authentic and contemporary.',
     'home.storyParagraph3':
@@ -152,9 +152,9 @@ export const translations = {
     'home.viewOurMenu': 'UNSERE SPEISEKARTE ANSEHEN',
     'home.storySoul': 'Das Herz des',
     'home.storyFreshBaking': 'Frischbackens',
-    'home.storyTagline': 'In Hamburg frisch gebacken – nie eingefroren, nie aufgewärmt.',
+    'home.storyTagline': 'In Hamburg frisch gebacken, nie eingefroren, nie aufgewärmt.',
     'home.storyParagraph1':
-      'Seit Generationen hat unsere Familie die Kunst des Backens verfeinert und die Wärme der türkischen Tradition mit der Präzision deutschen Handwerks vereint – eine Fusion, die zur Seele von Hisar Backhaus geworden ist.',
+      'Seit Generationen hat unsere Familie die Kunst des Backens verfeinert und die Wärme der türkischen Tradition mit der Präzision deutschen Handwerks vereint, eine Fusion, die zur Seele von Hisar Backhaus geworden ist.',
     'home.storyParagraph2':
       'Bei Hisar Backhaus hat jede Filiale ihre eigene Küche, in der Teig zubereitet, gebacken und den ganzen Tag über frisch serviert wird. Wir verbinden traditionelles anatolisches Backerbe mit moderner europäischer Patisseriekunst, um Aromen zu schaffen, die sich authentisch und zeitgemäß zugleich anfühlen.',
     'home.storyParagraph3':
