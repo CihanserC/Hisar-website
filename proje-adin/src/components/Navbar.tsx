@@ -21,7 +21,7 @@ export function Navbar({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (currentPage === 'contact') {
+    if (currentPage === 'contact' || currentPage === 'legal' || currentPage === 'privacy') {
       setIsScrolled(false);
       return;
     }
@@ -38,17 +38,20 @@ export function Navbar({
     { label: t(language, 'nav.contact'), id: 'contact' },
   ];
 
-  /** Contact page: no scroll shrink/glass. Other pages: transparent until scrolled. */
-  const navScrolled = isScrolled && currentPage !== 'contact';
-  const navTransparent = !navScrolled;
+  /** Contact/legal: fixed style, no scroll shrink. Other pages: transparent until scrolled. */
   const navOnContact = currentPage === 'contact';
-  const navOnDarkHero = navTransparent && !navOnContact;
+  const navOnPrimaryBar = currentPage === 'legal' || currentPage === 'privacy';
+  const navScrolled = isScrolled && !navOnContact && !navOnPrimaryBar;
+  const navTransparent = !navScrolled;
+  const navOnLightText = (navTransparent && !navOnContact) || navOnPrimaryBar;
 
-  const navClassName = navOnContact
-    ? 'bg-background py-9 shadow-sm border-b border-outline-variant/30'
-    : navScrolled
-      ? 'glass-nav py-6 shadow-sm'
-      : 'bg-transparent py-9';
+  const navClassName = navOnPrimaryBar
+    ? 'bg-primary py-9 shadow-sm'
+    : navOnContact
+      ? 'bg-background py-9 shadow-sm border-b border-outline-variant/30'
+      : navScrolled
+        ? 'glass-nav py-6 shadow-sm'
+        : 'bg-transparent py-9';
 
   return (
     <nav
@@ -64,7 +67,7 @@ export function Navbar({
 
         <div
           className={`hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-x-8 md:gap-x-12 font-nav font-light uppercase tracking-[0.16em] md:tracking-[0.2em] text-lg md:text-xl ${
-            navOnDarkHero ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]' : ''
+            navOnLightText ? 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]' : ''
           }`}
         >
           {navLinks.map((link) => (
@@ -75,12 +78,12 @@ export function Navbar({
                 currentPage === link.id
                   ? navOnContact
                     ? 'text-tertiary font-normal'
-                    : navOnDarkHero
+                    : navOnLightText
                       ? 'text-white font-normal'
                       : 'text-black font-normal'
                   : navOnContact
                     ? 'text-tertiary/80'
-                    : navOnDarkHero
+                    : navOnLightText
                       ? 'text-white/85'
                       : 'text-black/80'
               }`}
@@ -90,7 +93,7 @@ export function Navbar({
                 <motion.div
                   layoutId="navUnderline"
                   className={`absolute -bottom-1 left-0 w-full h-px ${
-                    navOnContact ? 'bg-tertiary' : navOnDarkHero ? 'bg-white' : 'bg-black'
+                    navOnContact ? 'bg-tertiary' : navOnLightText ? 'bg-white' : 'bg-black'
                   }`}
                 />
               )}
@@ -99,12 +102,12 @@ export function Navbar({
         </div>
 
         <div className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2">
-          <LanguageSelector onDark={navOnDarkHero} />
+          <LanguageSelector onDark={navOnLightText} />
         </div>
 
         <button
           className={`md:hidden ${
-            navOnContact ? 'text-tertiary' : navOnDarkHero ? 'text-white drop-shadow-md' : 'text-black'
+            navOnContact ? 'text-tertiary' : navOnLightText ? 'text-white drop-shadow-md' : 'text-black'
           }`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >

@@ -125,7 +125,29 @@ export function Footer({
             <TikTokBrandIcon className="w-6 h-6" />
           </a>
         </div>
-        <p className="text-xs opacity-40 text-center mt-5">{copyrightText}</p>
+        <p className="text-xs opacity-40 text-center mt-5 flex flex-wrap items-center justify-center gap-x-2 gap-y-1">
+          <span>{copyrightText}</span>
+          <span className="opacity-60" aria-hidden="true">
+            ·
+          </span>
+          <button
+            type="button"
+            onClick={() => setPage('legal')}
+            className="underline opacity-70 hover:opacity-100 hover:text-white transition-colors"
+          >
+            {t(language, 'footer.legalLink')}
+          </button>
+          <span className="opacity-60" aria-hidden="true">
+            ·
+          </span>
+          <button
+            type="button"
+            onClick={() => setPage('privacy')}
+            className="underline opacity-70 hover:opacity-100 hover:text-white transition-colors"
+          >
+            {t(language, 'footer.privacyLink')}
+          </button>
+        </p>
       </div>
     </footer>
   );

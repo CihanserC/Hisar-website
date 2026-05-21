@@ -11,6 +11,8 @@ import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
+import { LegalNoticePage } from './pages/LegalNoticePage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import heroVideo from './assets/videos/website-hisar.mp4';
 import aboutHeroBgWebp from './assets/about-us/about-us-top.webp';
 
@@ -73,6 +75,26 @@ export default function App() {
                 exit={{ opacity: 0 }}
               >
                 <ContactPage />
+              </motion.div>
+            )}
+            {page === 'legal' && (
+              <motion.div
+                key="legal"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <LegalNoticePage />
+              </motion.div>
+            )}
+            {page === 'privacy' && (
+              <motion.div
+                key="privacy"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <PrivacyPolicyPage />
               </motion.div>
             )}
           </AnimatePresence>
