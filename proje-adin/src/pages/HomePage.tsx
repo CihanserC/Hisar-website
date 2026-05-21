@@ -9,7 +9,7 @@ import highlightBread from '../assets/foods/jpg/IMG_7924.jpg';
 import highlightPastries from '../assets/foods/jpg/IMG_7610.jpg';
 import highlightCafe from '../assets/foods/jpg/IMG_7923.jpg';
 import highlightSavory from '../assets/foods/jpg/IMG_7656.jpg';
-import storyBaker from '../assets/foods/jpg/IMG_7649.jpg';
+import storyBaker from '../assets/foods/jpg/IMG_7924.jpg';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -113,12 +113,13 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <img
               className="w-full aspect-[4/5] object-cover rounded-lg relative z-10"
               src={storyBaker}
-              alt="Fresh Turkish pastries at Hisar Backhaus"
+              alt="Fresh bread rolls with seeds at Hisar Backhaus"
             />
           </div>
           <div className="md:col-span-7 space-y-10">
-            <h2 className="text-5xl md:text-7xl text-primary font-bold leading-tight">
-              {t(language, 'home.storySoul')} <br />
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight">
+              <span className="text-black">{t(language, 'home.storySoul')}</span>
+              <br />
               <span className="italic text-tertiary">{t(language, 'home.storyFreshBaking')}</span>
             </h2>
             <p className="text-lg text-on-surface-variant/80 italic border-l-4 border-tertiary pl-8 py-2 max-w-xl">
@@ -149,7 +150,7 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
       <section className="py-16 bg-surface">
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="mb-12 text-center max-w-3xl mx-auto">
-            <h2 className="text-5xl md:text-6xl text-primary font-black mt-4 tracking-tighter">
+            <h2 className="text-5xl md:text-6xl text-[#7a0d0e] font-black mt-4 tracking-tighter">
               {t(language, 'menuHighlights.bakedWithHeart')}
             </h2>
           </div>
