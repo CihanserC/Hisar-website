@@ -5,6 +5,10 @@ import type { Page } from '../types/page';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 import heroVideo from '../assets/videos/website-hisar.mp4';
+import highlightBread from '../assets/foods/jpg/IMG_7924.jpg';
+import highlightPastries from '../assets/foods/jpg/IMG_7610.jpg';
+import highlightCafe from '../assets/foods/jpg/IMG_7923.jpg';
+import highlightSavory from '../assets/foods/jpg/IMG_7656.jpg';
 
 export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
   const { language } = useLanguage();
@@ -117,11 +121,17 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
               {t(language, 'home.storySoul')} <br />
               <span className="italic text-tertiary">{t(language, 'home.storyFreshBaking')}</span>
             </h2>
+            <p className="text-lg text-on-surface-variant/80 italic border-l-4 border-tertiary pl-8 py-2 max-w-xl">
+              {t(language, 'home.storyTagline')}
+            </p>
             <p className="text-xl text-on-surface-variant leading-relaxed max-w-xl">
               {t(language, 'home.storyParagraph1')}
             </p>
-            <p className="text-lg text-on-surface-variant/80 italic border-l-4 border-tertiary pl-8 py-2">
-              {t(language, 'home.storyQuote')}
+            <p className="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+              {t(language, 'home.storyParagraph2')}
+            </p>
+            <p className="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+              {t(language, 'home.storyParagraph3')}
             </p>
             <button
               type="button"
@@ -148,9 +158,8 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1200"
-                alt="Sourdough"
-                referrerPolicy="no-referrer"
+                src={highlightBread}
+                alt="Fresh bread selection"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-white">
@@ -173,9 +182,8 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=1200"
-                alt="Pastries"
-                referrerPolicy="no-referrer"
+                src={highlightPastries}
+                alt="Fresh croissants"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-8">
@@ -191,9 +199,8 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=600"
-                alt="Coffee"
-                referrerPolicy="no-referrer"
+                src={highlightCafe}
+                alt="Chocolate croissants"
               />
               <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-white">
@@ -206,9 +213,8 @@ export function HomePage({ setPage }: { setPage: (p: Page) => void }) {
             <div className="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-3xl">
               <img
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=600"
-                alt="Savory"
-                referrerPolicy="no-referrer"
+                src={highlightSavory}
+                alt="Savory pide and pastries"
               />
               <div className="absolute inset-0 bg-tertiary/20 group-hover:bg-tertiary/10 transition-colors"></div>
               <div className="absolute bottom-8 left-8 text-white">

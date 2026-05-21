@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
 import { t } from '../i18n/translations';
 
-import aboutHeroBg from '../assets/about-us/IMG_7950.jpg';
+import aboutHeroBg from '../assets/about-us/about-us-top.png';
 import aboutSlider3 from '../assets/about-us/slider3.jpg';
 import aboutSlider2 from '../assets/about-us/slider2.jpg';
 import foodAssortedPastry from '../assets/foods/jpg/IMG_7649.jpg';

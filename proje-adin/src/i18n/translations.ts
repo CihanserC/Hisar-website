@@ -9,12 +9,15 @@ export const translations = {
     'home.estHamburg': 'EST. HAMBURG',
     'home.artisanBakeryCafe': 'Artisan Bakery & Cafe',
     'home.viewOurMenu': 'VIEW OUR MENU',
-    'home.storySoul': 'The Soul of',
+    'home.storySoul': 'The Heart of',
     'home.storyFreshBaking': 'Fresh Baking',
+    'home.storyTagline': 'Freshly baked in Hamburg, never frozen, never reheated.',
     'home.storyParagraph1':
-      'For generations, the scent of fresh dough and roasting coffee has defined our family legacy. At Hisar Backhaus, we blend traditional Anatolian techniques with modern European pastry craftsmanship.',
-    'home.storyQuote':
-      '"Every loaf tells a story of patience, heat, and the finest organic grains sourced from local fields."',
+      'For generations, our family has refined the art of baking, combining the warmth of Turkish tradition with the precision of German craftsmanship—a fusion that has become the soul of Hisar Backhaus.',
+    'home.storyParagraph2':
+      'At Hisar Backhaus, every branch has its own kitchen, where dough is prepared, baked, and served fresh throughout the day. We unite traditional Anatolian baking heritage with modern European pastry artistry to create flavors that feel both authentic and contemporary.',
+    'home.storyParagraph3':
+      'Behind every loaf, pastry, and cup of coffee stands a diverse team of bakers and artisans whose roots stretch across different regions and cultures. Each member brings the flavors, techniques, and memories of their homeland into their craft, turning every creation into a shared story of experience, passion, and tradition.',
     'home.readFullStory': 'READ OUR FULL STORY',
 
     'locations.visitUs': 'Visit Us',
@@ -147,12 +150,15 @@ export const translations = {
     'home.estHamburg': 'SEIT HAMBURG',
     'home.artisanBakeryCafe': 'Handwerkliche Bäckerei & Café',
     'home.viewOurMenu': 'UNSERE SPEISEKARTE ANSEHEN',
-    'home.storySoul': 'Die Seele des',
+    'home.storySoul': 'Das Herz des',
     'home.storyFreshBaking': 'Frischbackens',
+    'home.storyTagline': 'In Hamburg frisch gebacken – nie eingefroren, nie aufgewärmt.',
     'home.storyParagraph1':
-      'Seit Generationen prägt der Duft von frischem Teig und geröstetem Kaffee unser Familienerbe. Bei Hisar Backhaus verbinden wir traditionelle anatolische Techniken mit moderner europäischer Patisseriekunst.',
-    'home.storyQuote':
-      '"Jedes Brot erzählt eine Geschichte aus Geduld, Wärme und den besten Bio-Körnern von lokalen Feldern."',
+      'Seit Generationen hat unsere Familie die Kunst des Backens verfeinert und die Wärme der türkischen Tradition mit der Präzision deutschen Handwerks vereint – eine Fusion, die zur Seele von Hisar Backhaus geworden ist.',
+    'home.storyParagraph2':
+      'Bei Hisar Backhaus hat jede Filiale ihre eigene Küche, in der Teig zubereitet, gebacken und den ganzen Tag über frisch serviert wird. Wir verbinden traditionelles anatolisches Backerbe mit moderner europäischer Patisseriekunst, um Aromen zu schaffen, die sich authentisch und zeitgemäß zugleich anfühlen.',
+    'home.storyParagraph3':
+      'Hinter jedem Brot, jedem Gebäck und jeder Tasse Kaffee steht ein vielfältiges Team aus Bäckern und Handwerkern, deren Wurzeln verschiedene Regionen und Kulturen umfassen. Jedes Mitglied bringt die Aromen, Techniken und Erinnerungen seiner Heimat in sein Handwerk ein und macht jede Kreation zu einer gemeinsamen Geschichte aus Erfahrung, Leidenschaft und Tradition.',
     'home.readFullStory': 'LIES UNSERE GANZE GESCHICHTE',
 
     'locations.visitUs': 'Besuchen Sie uns',

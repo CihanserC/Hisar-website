@@ -81,7 +81,7 @@ export function Footer({
               <Phone className="w-5 h-5" /> 040 73673650
             </li>
             <li className="opacity-80 flex items-center gap-3">
-              <Mail className="w-5 h-5" /> info@hisar-backhaus.com
+              <Mail className="w-5 h-5" /> info@hisarbackhaus.de
             </li>
             <li>
               <button
