@@ -103,7 +103,7 @@ export function AboutPage() {
   return (
     <div className="bg-background">
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative min-h-[70vh] overflow-hidden pt-28 md:pt-32">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] overflow-hidden pt-20 sm:pt-24 md:pt-32">
         <div className="absolute inset-0 z-0">
           <picture>
             <source srcSet={aboutHeroBgWebp} type="image/webp" />
@@ -117,12 +117,12 @@ export function AboutPage() {
           </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
         </div>
-        <div className="relative z-10 mx-auto flex min-h-[70vh] max-w-7xl flex-col justify-center px-6 py-20 md:px-12 md:py-28">
+        <div className="relative z-10 mx-auto flex min-h-[60vh] sm:min-h-[70vh] max-w-7xl flex-col justify-center page-x-padding py-12 sm:py-20 md:py-28">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08 }}
-            className="mt-6 max-w-3xl font-headline text-5xl font-black leading-tight tracking-tighter text-white md:text-7xl md:leading-[1.05]"
+            className="mt-4 sm:mt-6 max-w-3xl font-headline text-3xl sm:text-4xl md:text-7xl font-black leading-tight tracking-tighter text-white md:leading-[1.05]"
           >
             {t(language, 'about.hearthTitle1')} <br />
             <span className="italic text-white/90">{t(language, 'about.hearthTitle2')}</span>
@@ -131,19 +131,19 @@ export function AboutPage() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.16 }}
-            className="mt-10 max-w-2xl space-y-5"
+            className="mt-6 sm:mt-10 max-w-2xl space-y-4 sm:space-y-5"
           >
-            <p className="text-lg leading-relaxed text-white/90">{t(language, 'about.body.p1')}</p>
-            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p2')}</p>
-            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p3')}</p>
-            <p className="text-lg leading-relaxed text-white/80">{t(language, 'about.body.p4')}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-white/90">{t(language, 'about.body.p1')}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-white/80">{t(language, 'about.body.p2')}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-white/80">{t(language, 'about.body.p3')}</p>
+            <p className="text-base sm:text-lg leading-relaxed text-white/80">{t(language, 'about.body.p4')}</p>
           </motion.div>
         </div>
       </section>
 
 
       {/* ── Story + Gallery ──────────────────────────────── */}
-      <section className="bg-surface px-6 py-24 md:px-12 md:py-32">
+      <section className="bg-surface page-x-padding py-16 sm:py-24 md:py-32">
         <div className="mx-auto max-w-7xl">
 
           {/* Eyebrow + heading */}
@@ -152,15 +152,15 @@ export function AboutPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={storyInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, ease: 'easeOut' }}
-            className="mb-16"
+            className="mb-10 sm:mb-16"
           >
-            <h2 className="font-headline text-4xl font-black leading-tight text-tertiary md:text-6xl max-w-3xl">
+            <h2 className="font-headline text-2xl sm:text-3xl md:text-6xl font-black leading-tight text-tertiary max-w-3xl">
               {t(language, 'about.section.heading')}
             </h2>
           </motion.div>
 
           {/* Two-column: text + image collage */}
-          <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:gap-20 items-start">
+          <div className="grid grid-cols-1 gap-10 sm:gap-16 md:grid-cols-2 md:gap-20 items-start">
             {/* Pillars */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

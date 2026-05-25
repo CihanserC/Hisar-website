@@ -58,14 +58,14 @@ export function Footer({
         src={bMark}
         alt=""
         aria-hidden="true"
-        className="pointer-events-none select-none absolute right-4 md:right-10 lg:right-16 top-1/2 -translate-y-1/2 w-64 md:w-80 lg:w-96 opacity-15 rotate-[11deg]"
+        className="pointer-events-none select-none absolute right-0 md:right-10 lg:right-16 top-1/2 -translate-y-1/2 w-40 sm:w-64 md:w-80 lg:w-96 opacity-10 sm:opacity-15 rotate-[11deg]"
       />
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-10 md:px-12 md:py-12">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 page-x-padding py-8 sm:py-10 md:py-12">
         <div className="space-y-4">
           <h4 className="font-extrabold text-base tracking-widest uppercase">
             {t(language, 'footer.locationsTitle')}
           </h4>
-          <ul className="text-lg space-y-3">
+          <ul className="text-base sm:text-lg space-y-2 sm:space-y-3">
             <li className="opacity-80">{t(language, 'footer.billstedtLine')}</li>
             <li className="opacity-80">{t(language, 'footer.stGeorgLine')}</li>
             <li className="opacity-80">{t(language, 'footer.altonaLine')}</li>
@@ -76,7 +76,7 @@ export function Footer({
           <h4 className="font-extrabold text-base tracking-widest uppercase">
             {t(language, 'footer.contactTitle')}
           </h4>
-          <ul className="text-lg space-y-3">
+          <ul className="text-base sm:text-lg space-y-2 sm:space-y-3">
             <li className="opacity-80 flex items-center gap-3">
               <Phone className="w-5 h-5" /> 040 73673650
             </li>

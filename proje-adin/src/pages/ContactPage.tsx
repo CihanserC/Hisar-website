@@ -54,9 +54,9 @@ export function ContactPage() {
   const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedStore.mapQuery)}`;
 
   return (
-    <section className="bg-background pt-32 pb-0 md:pt-36">
+    <section className="bg-background pt-24 sm:pt-28 md:pt-36 pb-0">
       {/* Map block: full bleed horizontally, fixed height so footer stays visible */}
-      <div className="relative h-[70vh] min-h-[28rem] w-full overflow-hidden border-t border-outline-variant/25 md:h-[75vh] md:max-h-[44rem]">
+      <div className="relative h-[55vh] min-h-[20rem] w-full overflow-hidden border-t border-outline-variant/25 sm:h-[65vh] sm:min-h-[24rem] md:h-[75vh] md:max-h-[44rem]">
         <iframe
           title={`Google Maps — ${selectedStore.name}`}
           src={mapSrc}
@@ -66,47 +66,47 @@ export function ContactPage() {
         />
 
         {/* Branch list overlaid on the map */}
-        <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-end p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:block md:p-0">
-          <div className="pointer-events-auto mx-auto flex w-full max-w-md flex-col md:absolute md:top-1/2 md:-translate-y-1/2 md:left-12 md:mx-0 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:w-[26rem]">
-            <div className="overflow-hidden rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-2xl backdrop-blur-md">
-              <div className="border-b border-outline-variant/40 px-4 py-3 text-center">
-                <h1 className="font-headline text-xl font-bold tracking-tight text-tertiary">
+        <div className="pointer-events-none absolute inset-0 z-10 flex flex-col items-start justify-end p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] md:block md:p-0">
+          <div className="pointer-events-auto w-[min(calc(100%-0.5rem),15.5rem)] sm:w-[min(calc(100%-1rem),17.5rem)] flex flex-col md:absolute md:top-1/2 md:-translate-y-1/2 md:left-12 md:w-[min(22rem,calc(100vw-3rem))] lg:left-16 lg:w-[26rem]">
+            <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-outline-variant/50 bg-surface/95 shadow-xl sm:shadow-2xl backdrop-blur-md">
+              <div className="border-b border-outline-variant/40 px-3 py-2 sm:px-4 sm:py-3 text-left md:text-center">
+                <h1 className="font-headline text-base sm:text-lg md:text-xl font-bold tracking-tight text-tertiary">
                   {t(language, 'footer.locationsTitle')}
                 </h1>
               </div>
 
-              <ul className="divide-y divide-outline-variant/30 px-2 py-1">
+              <ul className="divide-y divide-outline-variant/30 px-1 py-0.5 sm:px-2 sm:py-1">
                 {stores.map((loc) => {
                   return (
                     <li
                       key={loc.id}
-                      className="group rounded-xl transition-colors hover:bg-[#d40304]"
+                      className="group rounded-lg sm:rounded-xl transition-colors hover:bg-[#d40304]"
                     >
                       <button
                         type="button"
                         onClick={() => setSelectedStoreId(loc.id)}
-                        className="w-full px-3 py-3 text-left"
+                        className="w-full px-2 py-2 sm:px-3 sm:py-3 text-left"
                       >
-                        <span className="flex items-start gap-3">
-                          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tertiary/10 text-tertiary transition-colors group-hover:bg-white/20 group-hover:text-white">
-                            <MapPin className="h-4 w-4" aria-hidden />
+                        <span className="flex items-start gap-2 sm:gap-3">
+                          <span className="mt-0.5 flex h-6 w-6 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-tertiary/10 text-tertiary transition-colors group-hover:bg-white/20 group-hover:text-white">
+                            <MapPin className="h-3 w-3 sm:h-4 sm:w-4" aria-hidden />
                           </span>
                           <span className="min-w-0 flex-1">
-                            <span className="flex items-center justify-between gap-2">
-                              <span className="font-headline text-lg font-semibold text-tertiary transition-colors group-hover:text-white md:text-xl">
+                            <span className="flex items-center justify-between gap-1.5 sm:gap-2">
+                              <span className="font-headline text-sm sm:text-lg font-semibold text-tertiary transition-colors group-hover:text-white md:text-xl">
                                 {loc.name}
                               </span>
                               <ChevronRight
-                                className="h-4 w-4 shrink-0 text-tertiary opacity-40 transition-colors group-hover:text-white/70"
+                                className="h-3 w-3 sm:h-4 sm:w-4 shrink-0 text-tertiary opacity-40 transition-colors group-hover:text-white/70"
                                 aria-hidden
                               />
                             </span>
-                            <span className="mt-1 block text-sm leading-snug text-on-surface-variant transition-colors group-hover:text-white/80">
+                            <span className="mt-0.5 sm:mt-1 block text-[11px] sm:text-sm leading-snug text-on-surface-variant transition-colors group-hover:text-white/80">
                               {loc.addr}
                             </span>
-                            <span className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                            <span className="mt-1 sm:mt-2 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10px] sm:text-xs">
                               <span className="inline-flex items-center gap-1 text-on-surface-variant transition-colors group-hover:text-white/70">
-                                <Clock className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                                <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5 shrink-0" aria-hidden />
                                 {loc.hours}
                               </span>
                             </span>
@@ -118,12 +118,12 @@ export function ContactPage() {
                 })}
               </ul>
 
-              <div className="border-t border-outline-variant/40 p-3">
+              <div className="border-t border-outline-variant/40 p-2 sm:p-3">
                 <a
                   href={mapsLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex w-full items-center justify-center rounded-lg bg-[#d40304] px-4 py-2.5 text-center text-sm font-semibold tracking-wide text-white transition-opacity hover:opacity-90"
+                  className="flex w-full items-center justify-center rounded-md sm:rounded-lg bg-[#d40304] px-3 py-2 sm:px-4 sm:py-2.5 text-center text-[11px] sm:text-sm font-semibold tracking-wide text-white transition-opacity hover:opacity-90"
                 >
                   {t(language, 'locations.getDirections')}
                 </a>

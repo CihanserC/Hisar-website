@@ -68,8 +68,13 @@
 }
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
   body {
-    @apply bg-background text-on-surface font-body antialiased;
+    @apply bg-background text-on-surface font-body antialiased overflow-x-hidden;
   }
 }
 
@@ -83,6 +88,10 @@
   }
 
   .btn-primary {
-    @apply bg-tertiary text-white px-10 py-4 rounded-md font-bold text-lg tracking-wide hover:bg-tertiary/90 transition-all shadow-xl active:scale-95 inline-block;
+    @apply bg-tertiary text-white px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 rounded-md font-bold text-base sm:text-lg tracking-wide hover:bg-tertiary/90 transition-all shadow-xl active:scale-95 inline-block;
+  }
+
+  .page-x-padding {
+    @apply px-4 sm:px-6 md:px-12;
   }
 }

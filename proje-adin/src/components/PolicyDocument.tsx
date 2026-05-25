@@ -11,10 +11,10 @@ export type PolicySection = {
 
 export function PolicyDocument({ title, sections }: { title: string; sections: PolicySection[] }) {
   return (
-    <article className="bg-background pt-48 pb-20 md:pt-56">
-      <div className="max-w-3xl mx-auto px-8 md:px-12 space-y-12">
-        <header className="space-y-3 border-b border-outline-variant/40 pb-10">
-          <h1 className="font-headline text-4xl md:text-5xl font-black text-on-surface leading-tight">{title}</h1>
+    <article className="bg-background pt-28 sm:pt-36 pb-12 sm:pb-20 md:pt-56">
+      <div className="max-w-3xl mx-auto page-x-padding space-y-8 sm:space-y-12">
+        <header className="space-y-3 border-b border-outline-variant/40 pb-6 sm:pb-10">
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-black text-on-surface leading-tight">{title}</h1>
         </header>
         <div className="space-y-12">
           {sections.map((section, i) => (

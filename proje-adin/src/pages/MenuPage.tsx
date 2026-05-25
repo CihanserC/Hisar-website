@@ -87,7 +87,7 @@ function MenuItemCard({
       </div>
 
       <div className="flex flex-col flex-1 p-4">
-        <h3 className="font-headline text-lg font-black text-primary leading-snug">{item.name}</h3>
+        <h3 className="font-headline text-base sm:text-lg font-black text-primary leading-snug">{item.name}</h3>
         <p className="mt-1 text-[10px] font-bold uppercase tracking-widest text-on-surface-variant/70">
           {copy.menuOnly}
         </p>
@@ -224,7 +224,7 @@ function CategoryProductsView({
         </p>
       </header>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
         {cat.items.map((item, i) => (
           <MenuItemCard key={item.name} item={item} categoryId={cat.id} index={i} copy={copy} />
         ))}
@@ -254,18 +254,18 @@ export function MenuPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-[#7a0d0e] pt-32 md:pt-40 pb-16 md:pb-20">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <p className="text-xs font-bold uppercase tracking-[0.28em] text-white/60 mb-4">{copy.eyebrow}</p>
-          <h1 className="font-headline text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
+      <header className="bg-[#7a0d0e] pt-24 sm:pt-28 md:pt-40 pb-10 sm:pb-14 md:pb-20">
+        <div className="max-w-7xl mx-auto page-x-padding">
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.28em] text-white/60 mb-3 sm:mb-4">{copy.eyebrow}</p>
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-7xl font-black text-white tracking-tighter leading-none">
             {copy.title}
           </h1>
-          <p className="mt-5 font-headline text-xl md:text-2xl italic text-white/85 max-w-xl">{copy.subtitle}</p>
-          <p className="mt-4 text-white/70 max-w-2xl leading-relaxed">{copy.intro}</p>
+          <p className="mt-4 sm:mt-5 font-headline text-lg sm:text-xl md:text-2xl italic text-white/85 max-w-xl">{copy.subtitle}</p>
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white/70 max-w-2xl leading-relaxed">{copy.intro}</p>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-16">
+      <main className="max-w-7xl mx-auto page-x-padding py-8 sm:py-12 md:py-16">
         <AnimatePresence mode="wait">
           {selectedCategory ? (
             <CategoryProductsView
